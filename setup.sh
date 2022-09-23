@@ -66,12 +66,16 @@ docker run -d --network=mm_custom_network \
               --name=nginx \
               -p 80:8881 matchminer/mm_nginx
 
-echo "Loading demo data..."
+echo "Downloading demo data..."
+EXTRACT_DIR="$(mktemp -d)"
+pushd $EXTRACT_DIR > /dev/null
 curl -fsSL -o matchminer.tar.gz https://raw.githubusercontent.com/dfci/matchminer-setup/HEAD/matchminer.tar.gz
 tar -xzvf matchminer.tar.gz
-sleep 2
 docker cp matchminer mongo:/
-sleep 1
-docker exec mongo mongorestore matchminer
+popd
+rm -rf $EXTRACT_DIR
+
+echo "Loading demo data into mongo..."
+docker exec mongo mongorestore --quiet matchminer
 
 echo "SUCCESS. To view, navigate to http://localhost"
