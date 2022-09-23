@@ -18,24 +18,24 @@ fi
 
 echo "Setting up docker network..."
 docker network create mm_custom_network
-sleep 1
 
 echo "Setting up mongo db..."
 docker run -d --name mongo \
               --network=mm_custom_network \
               mongo:3.6.14 mongod --smallfiles --replSet=rs0
-sleep 3
 
 echo "Initializing mongodb as replica set..."
-docker exec mongo mongo matchminer --eval "rs.initiate();"
-sleep 3
+while ! docker exec mongo mongo matchminer --eval "rs.initiate();" >/dev/null 2>/dev/null
+do
+  echo 'Waiting for mongodb to start...'
+  sleep 1
+done
 
 echo "Setting up elasticsearch..."
 docker pull matchminer/mmelastic:latest
 docker run -d --name=mm_elastic \
               --network=mm_custom_network \
               matchminer/mmelastic:latest
-sleep 5
 
 echo "Setting up api..."
 docker pull matchminer/mm_api:latest
