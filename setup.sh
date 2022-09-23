@@ -1,6 +1,21 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+if ! which docker >/dev/null
+then
+  echo 'this script requires docker'
+  exit 1
+fi
+
+ERRS="$(docker info --format '{{range .ServerErrors}}{{.}}{{end}}' 2>&1)"
+
+if ! test -z "$ERRS"
+then
+  echo 'cannot connect to docker:'
+  echo "$ERRS"
+  exit 1
+fi
+
 echo "Setting up docker network..."
 docker network create mm_custom_network
 sleep 1
