@@ -36,11 +36,14 @@ pushd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null
 echo 'Taking down any existing services...'
 docker-compose down --remove-orphans --volumes --timeout 5 --rmi local
 
-# Ensure that port 80 is not in use;
-if lsof -iTCP:80 -sTCP:LISTEN >/dev/null 2>/dev/null
+# Ensure that port 80 is not in use (macOS only):
+if test "$(uname -s)" = "Darwin" && which lsof >/dev/null 2>/dev/null
 then
-  echo 'Cannot start: port 80 is already in use'
-  exit 1
+  if lsof -iTCP:80 -sTCP:LISTEN >/dev/null 2>/dev/null
+  then
+    echo 'Cannot start: port 80 is already in use'
+    exit 1
+  fi
 fi
 
 # Pull images, create containers, and start:
