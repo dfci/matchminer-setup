@@ -1,0 +1,69 @@
+version: "3"
+services:
+  mmelastic:
+    image: matchminer/mmelastic:latest
+    read_only: true
+    tmpfs:
+    - "/tmp:exec"
+    - /usr/share/elasticsearch/logs
+    networks:
+      mm-dev-network:
+        aliases:
+        - mm_elastic
+        - mmelastic
+  mm_api:
+    image: matchminer/mm_api:latest
+    command: python pymm_run.py serve --no-auth
+    read_only: true
+    tmpfs:
+    - /var/tmp
+    environment:
+      SECRETS_JSON: /var/www/apache-flask/api/SECRETS_JSON.json
+      MONGO_URI: mongodb://mongo:27017/matchminer
+    networks:
+    - mm-dev-network
+  mongo:
+    image: mongo:3.6.14
+    command: --smallfiles --replSet=rs0 --setParameter maxLogSizeKB=1 --wiredTigerCacheSizeGB=1 --quiet
+    tmpfs:
+    - /tmp
+    networks:
+      mm-dev-network:
+        aliases:
+        - mongo
+  mm_connector:
+    image: matchminer/mm_connector:latest
+    depends_on:
+    - mongo
+    - mmelastic
+    environment:
+      MONGO_URI: mongodb://mongo:27017/matchminer
+      ELASTICSEARCH: mm_elastic
+      ELASTIC_INDEX: matchminer.trial
+    networks:
+    - mm-dev-network
+  mm_ui:
+    image: matchminer/mm_ui:latest
+    stop_signal: SIGKILL # service is stateless, can be stopped immediately
+    read_only: true
+    networks:
+    - mm-dev-network
+  mm_nginx:
+    image: matchminer/mm_nginx:latest
+    command: nginx -g "daemon off; error_log stderr warn;"
+    stop_signal: SIGKILL # service is stateless, can be stopped immediately
+    depends_on:
+      - mmelastic
+    read_only: true
+    ports:
+      - "80:8881"
+    tmpfs:
+    - /tmp
+    - /var/cache/nginx
+    - /var/run
+    networks:
+    - mm-dev-network
+networks:
+  mm-dev-network:
+    # tell docker-compose to create the network
+    external: false
