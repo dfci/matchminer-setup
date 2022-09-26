@@ -53,10 +53,16 @@ echo 'Starting containers...'
 docker-compose start
 
 # Wait for MongoDB to start:
-echo "Waiting for MongoDB to start:"
+echo 'Waiting for MongoDB to start...'
+START_WAIT="$SECONDS"
 while ! docker-compose exec mongo mongo --eval ";" >/dev/null 2>/dev/null
 do
   sleep 1
+  if test "$((SECONDS - START_WAIT))" -ge 15
+  then
+    echo "MongoDB failed to start; check docker-compose logs to debug"
+    exit 1
+  fi
 done
 
 # Set up MongoDB replica set:
@@ -74,12 +80,31 @@ docker-compose exec mongo mongorestore --quiet matchminer
 # Setup complete!
 popd >/dev/null
 
-# Wait for MatchMiner UI to be ready:
-echo "Waiting for MatchMiner UI to be ready..."
-while ! nc -z localhost 80
-do
-  sleep 1
-done
+# Helper to wait for a URL to become available:
+wait_for_url() {
+  curl --fail --location --max-time 1 --retry 15 --retry-delay 1 --retry-connrefused $1 >/dev/null 2>/dev/null;
+}
+
+# Wait for MatchMiner to be ready:
+START_TIME="$SECONDS"
+echo "Waiting for MatchMiner UI to become ready..."
+if ! wait_for_url http://localhost
+then
+  echo "Startup failed! Check docker-compose logs to debug..."
+  exit 1
+fi
+echo "Waiting for MatchMiner API to become ready..."
+if ! wait_for_url http://localhost/api/info
+then
+  echo "Startup failed! Check docker-compose logs to debug..."
+  exit 1
+fi
+echo "Waiting for MatchMiner ElasticSearch to become ready..."
+if ! wait_for_url http://localhost/elasticsearch
+then
+  echo "Startup failed! Check docker-compose logs to debug..."
+  exit 1
+fi
 
 # Notify user:
 echo "SUCCESS. To view, navigate to http://localhost"
