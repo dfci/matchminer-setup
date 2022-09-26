@@ -66,13 +66,13 @@ do
 done
 
 # Set up MongoDB replica set:
-echo "Initializing mongodb as replica set..."
-docker-compose exec mongo mongo matchminer --quiet --eval "rs.initiate();"
+echo 'Initializing mongodb as replica set...'
+docker-compose exec mongo mongo matchminer --quiet --eval "rs.initiate();" >/dev/null
 
 # Load demo data into MongoDB:
 echo "Loading demo data into mongo..."
 rm -rf ./matchminer
-tar -xzvf matchminer.tar.gz
+tar -xzf matchminer.tar.gz
 docker-compose cp matchminer mongo:/
 rm -rf ./matchminer
 docker-compose exec mongo mongorestore --quiet matchminer
@@ -107,4 +107,4 @@ then
 fi
 
 # Notify user:
-echo "SUCCESS. To view, navigate to http://localhost"
+echo "Success! MatchMiner is now available at: http://localhost"
