@@ -82,11 +82,10 @@ popd >/dev/null
 
 # Helper to wait for a URL to become available:
 wait_for_url() {
-  curl --fail --location --max-time 1 --retry 15 --retry-delay 1 --retry-connrefused $1 >/dev/null 2>/dev/null;
+  curl --fail --location --max-time 1 --retry 15 --retry-delay 1 --retry-connrefused "$1" >/dev/null 2>/dev/null;
 }
 
 # Wait for MatchMiner to be ready:
-START_TIME="$SECONDS"
 echo "Waiting for MatchMiner UI to become ready..."
 if ! wait_for_url http://localhost
 then
