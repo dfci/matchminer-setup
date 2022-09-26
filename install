@@ -1,14 +1,22 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Ensure that docker is installed:
 if ! which docker >/dev/null
 then
   echo 'this script requires docker'
   exit 1
 fi
 
-ERRS="$(docker info --format '{{range .ServerErrors}}{{.}}{{end}}' 2>&1)"
+# Ensure that docker-compose is installed:
+if ! which docker-compose >/dev/null
+then
+  echo 'this script requires docker-compose'
+  exit 1
+fi
 
+# Ensure that we can connect to Docker:
+ERRS="$(docker info --format '{{range .ServerErrors}}{{.}}{{end}}' 2>&1)"
 if ! test -z "$ERRS"
 then
   echo 'cannot connect to docker:'
@@ -16,66 +24,62 @@ then
   exit 1
 fi
 
-echo "Setting up docker network..."
-docker network create mm_custom_network
+# Start setup; cd into the path of this script:
+if test -z "${BASH_SOURCE[0]:-}"
+then
+  echo 'failed to find script path'
+  exit 1
+fi
+pushd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null
 
-echo "Setting up mongo db..."
-docker run -d --name mongo \
-              --network=mm_custom_network \
-              mongo:3.6.14 mongod --smallfiles --replSet=rs0
+# Take down any existing services:
+echo 'Taking down any existing services...'
+docker-compose down --remove-orphans --volumes --timeout 5 --rmi local
 
-echo "Initializing mongodb as replica set..."
-while ! docker exec mongo mongo matchminer --eval "rs.initiate();" >/dev/null 2>/dev/null
+# Ensure that port 80 is not in use;
+if lsof -iTCP:80 -sTCP:LISTEN >/dev/null 2>/dev/null
+then
+  echo 'Cannot start: port 80 is already in use'
+  exit 1
+fi
+
+# Pull images, create containers, and start:
+# (This is basically the same as docker-compose up)
+echo 'Pulling latest versions of images...'
+docker-compose pull
+echo 'Creating containers...'
+docker-compose create --pull never --no-build
+echo 'Starting containers...'
+docker-compose start
+
+# Wait for MongoDB to start:
+echo "Waiting for MongoDB to start:"
+while ! docker-compose exec mongo mongo --eval ";" >/dev/null 2>/dev/null
 do
-  echo 'Waiting for mongodb to start...',6
   sleep 1
 done
 
-echo "Setting up elasticsearch..."
-docker pull matchminer/mmelastic:latest
-docker run -d --name=mm_elastic \
-              --network=mm_custom_network \
-              matchminer/mmelastic:latest
+# Set up MongoDB replica set:
+echo "Initializing mongodb as replica set..."
+docker-compose exec mongo mongo matchminer --quiet --eval "rs.initiate();"
 
-echo "Setting up api..."
-docker pull matchminer/mm_api:latest
-docker run -d --name=mm_api \
-              --network=mm_custom_network \
-              --env=SECRETS_JSON=/var/www/apache-flask/api/SECRETS_JSON.json \
-              --env=MONGO_URI=mongodb://mongo:27017/matchminer \
-              matchminer/mm_api:latest python pymm_run.py serve --no-auth
-
-echo "Setting up mongo-connector..."
-docker pull matchminer/mm_connector:latest
-docker run -d --name=mm_connector \
-              --network=mm_custom_network \
-              --env MONGO_URI=mongodb://mongo:27017/matchminer \
-              --env ELASTICSEARCH=mm_elastic \
-              --env ELASTIC_INDEX=matchminer.trial \
-              matchminer/mm_connector:latest
-
-echo "Setting up UI..."
-docker pull matchminer/mm_ui:demo
-docker run -d --name=mm_ui \
-              --network=mm_custom_network \
-              matchminer/mm_ui:latest
-
-echo "Setting up nginx..."
-docker pull matchminer/mm_nginx:latest
-docker run -d --network=mm_custom_network \
-              --name=nginx \
-              -p 80:8881 matchminer/mm_nginx
-
-echo "Downloading demo data..."
-EXTRACT_DIR="$(mktemp -d)"
-pushd $EXTRACT_DIR > /dev/null
-curl -fsSL -o matchminer.tar.gz https://raw.githubusercontent.com/dfci/matchminer-setup/HEAD/matchminer.tar.gz
-tar -xzvf matchminer.tar.gz
-docker cp matchminer mongo:/
-popd
-rm -rf $EXTRACT_DIR
-
+# Load demo data into MongoDB:
 echo "Loading demo data into mongo..."
-docker exec mongo mongorestore --quiet matchminer
+rm -rf ./matchminer
+tar -xzvf matchminer.tar.gz
+docker-compose cp matchminer mongo:/
+rm -rf ./matchminer
+docker-compose exec mongo mongorestore --quiet matchminer
 
+# Setup complete!
+popd >/dev/null
+
+# Wait for MatchMiner UI to be ready:
+echo "Waiting for MatchMiner UI to be ready..."
+while ! nc -z localhost 80
+do
+  sleep 1
+done
+
+# Notify user:
 echo "SUCCESS. To view, navigate to http://localhost"
