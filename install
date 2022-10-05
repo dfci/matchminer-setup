@@ -136,5 +136,8 @@ then
   die "Startup failed! Check docker-compose logs to debug..."
 fi
 
+echo "Resetting elasticsearch..."
+curl --netrc-file ./netrc --fail --location --silent --show-error --output /dev/null -X POST http://localhost/api/reset_elasticsearch
+
 # Notify user:
 echo "Success! MatchMiner is now available at: http://localhost"
