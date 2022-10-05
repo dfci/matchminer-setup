@@ -143,7 +143,10 @@ curl --netrc-file ./netrc --fail --location --silent --show-error --output /dev/
 echo "MatchMiner started successfully!"
 echo "The UI is now available at: http://localhost"
 echo "To manage services, enter the directory '$(pwd)' and run docker-compose."
-if which xdg-open >/dev/null 2>/dev/null
+if test "${MATCHMINER_NO_OPEN_BROWSER:-}" = "1"
+then
+  echo "Not opening browser!"
+elif which xdg-open >/dev/null 2>/dev/null
 then
   echo "Opening browser..."
   xdg-open http://localhost
