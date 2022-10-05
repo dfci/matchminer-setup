@@ -1,0 +1,7 @@
+http.max_content_length: 500mb
+network.host: 0.0.0.0
+indices.query.bool.max_clause_count: 5120
+xpack.security.enabled: false # set to true for production
+discovery.type: single-node
+http.port: 9200
+

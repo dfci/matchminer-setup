@@ -1,0 +1,1430 @@
+{
+  "_id": {
+    "$oid": "633df6593f8f663a75941151"
+  },
+  "gender": "Redacted",
+  "mrn": "111111",
+  "oncotree_primary_diagnosis_name": "Glioblastoma",
+  "report_date": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "sample_id": "FS-11-111111",
+  "tumor_mutational_burden_per_megabase": {
+    "$numberDouble": "2.0"
+  },
+  "vital_status": "alive",
+  "clinical_id": {
+    "$oid": "5dcb9176f2a9ea003196b5f9"
+  },
+  "match_level": "step",
+  "internal_id": {
+    "$numberInt": "13171"
+  },
+  "reason_type": "genomic",
+  "q_depth": {
+    "$numberInt": "0"
+  },
+  "q_width": {
+    "$numberInt": "-1"
+  },
+  "code": "1",
+  "trial_curation_level_status": "open",
+  "trial_summary_status": "open",
+  "coordinating_center": "Dana-Farber Cancer Institute",
+  "show_in_ui": true,
+  "query_hash": "5190acad07980f593fab7f5c3a2bc1028def19b6",
+  "nct_id": "NCT02977780",
+  "protocol_no": "16-443",
+  "match_path": "treatment_list.step.1.match",
+  "combo_coord": "5ec710760d8a9f0c0ab9667a55718d4734fcfc0c",
+  "is_disabled": false,
+  "cancer_type_match": "specific",
+  "match_type": "gene",
+  "genomic_alteration": "!IDH1 Mutation",
+  "sort_order": [
+    {
+      "$numberInt": "1"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "1"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "0"
+    },
+    {
+      "$numberInt": "16443"
+    }
+  ],
+  "hash": "67f59dc47f03027a5576653f8745075af3fd3f8a",
+  "_me_id": "60dd20cdff51490099e12f4413d4276a",
+  "_updated": {
+    "$date": {
+      "$numberLong": "1665005145707"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a75941152"
+  },
+  "gender": "Redacted",
+  "mrn": "111111",
+  "oncotree_primary_diagnosis_name": "Glioblastoma",
+  "report_date": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "sample_id": "FS-11-111111",
+  "tumor_mutational_burden_per_megabase": {
+    "$numberDouble": "2.0"
+  },
+  "vital_status": "alive",
+  "clinical_id": {
+    "$oid": "5dcb9176f2a9ea003196b5f9"
+  },
+  "match_level": "step",
+  "internal_id": {
+    "$numberInt": "13058"
+  },
+  "reason_type": "genomic",
+  "q_depth": {
+    "$numberInt": "0"
+  },
+  "q_width": {
+    "$numberInt": "-1"
+  },
+  "code": "2",
+  "trial_curation_level_status": "open",
+  "trial_summary_status": "open",
+  "coordinating_center": "Dana-Farber Cancer Institute",
+  "show_in_ui": true,
+  "query_hash": "5190acad07980f593fab7f5c3a2bc1028def19b6",
+  "nct_id": "NCT02977780",
+  "protocol_no": "16-443",
+  "match_path": "treatment_list.step.0.match",
+  "combo_coord": "e4710a190b3051039e5c47705d0ea8e71c5ab202",
+  "is_disabled": false,
+  "cancer_type_match": "specific",
+  "match_type": "gene",
+  "genomic_alteration": "!IDH1 Mutation",
+  "sort_order": [
+    {
+      "$numberInt": "1"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "1"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "0"
+    },
+    {
+      "$numberInt": "16443"
+    }
+  ],
+  "hash": "b1114570e5c477488f54c4e58360d022e43f4092",
+  "_me_id": "60dd20cdff51490099e12f4413d4276a",
+  "_updated": {
+    "$date": {
+      "$numberLong": "1665005145707"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a75941154"
+  },
+  "gender": "Redacted",
+  "mrn": "111111",
+  "oncotree_primary_diagnosis_name": "Glioblastoma",
+  "report_date": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "sample_id": "FS-11-111111",
+  "tumor_mutational_burden_per_megabase": {
+    "$numberDouble": "2.0"
+  },
+  "vital_status": "alive",
+  "clinical_id": {
+    "$oid": "5dcb9176f2a9ea003196b5f9"
+  },
+  "match_level": "arm",
+  "internal_id": {
+    "$numberInt": "25"
+  },
+  "reason_type": "genomic",
+  "q_depth": {
+    "$numberInt": "2"
+  },
+  "q_width": {
+    "$numberInt": "1"
+  },
+  "code": "COHX EXP",
+  "trial_curation_level_status": "open",
+  "trial_summary_status": "closed",
+  "coordinating_center": "Massachusetts General Hospital",
+  "show_in_ui": true,
+  "query_hash": "c190bf554c23c45099c4464912d95b597b95c9c5",
+  "nct_id": "NCT01296555",
+  "protocol_no": "11-010",
+  "match_path": "treatment_list.step.1.arm.0.match",
+  "combo_coord": "a509d7a2073cec79e90b4b93d76a06b1ee596400",
+  "is_disabled": false,
+  "cancer_type_match": "all_solid",
+  "match_type": "gene",
+  "genomic_alteration": "PIK3CA p.E545K",
+  "genomic_id": {
+    "$oid": "5dba5d6af2a9ea0029590b2b"
+  },
+  "allele_fraction": {
+    "$numberDouble": "0.06"
+  },
+  "chromosome": "3",
+  "position": {
+    "$numberInt": "178936091"
+  },
+  "reference_allele": "G",
+  "tier": {
+    "$numberInt": "2"
+  },
+  "true_cdna_change": "c.1633G>A",
+  "true_hugo_symbol": "PIK3CA",
+  "true_protein_change": "p.E545K",
+  "true_transcript_exon": {
+    "$numberInt": "10"
+  },
+  "true_variant_classification": "Missense_Mutation",
+  "variant_category": "MUTATION",
+  "wildtype": false,
+  "sort_order": [
+    {
+      "$numberInt": "1"
+    },
+    {
+      "$numberInt": "60"
+    },
+    {
+      "$numberInt": "1"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "11010"
+    }
+  ],
+  "hash": "66297255000ddc9c75c660559b8e49f2081c38ba",
+  "_me_id": "60dd20cdff51490099e12f4413d4276a",
+  "_updated": {
+    "$date": {
+      "$numberLong": "1665005145714"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a75941155"
+  },
+  "gender": "Redacted",
+  "mrn": "111111",
+  "oncotree_primary_diagnosis_name": "Glioblastoma",
+  "report_date": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "sample_id": "FS-11-111111",
+  "tumor_mutational_burden_per_megabase": {
+    "$numberDouble": "2.0"
+  },
+  "vital_status": "alive",
+  "clinical_id": {
+    "$oid": "5dcb9176f2a9ea003196b5f9"
+  },
+  "match_level": "dose",
+  "internal_id": {
+    "$numberInt": "21"
+  },
+  "reason_type": "genomic",
+  "q_depth": {
+    "$numberInt": "2"
+  },
+  "q_width": {
+    "$numberInt": "1"
+  },
+  "code": "X-1",
+  "trial_curation_level_status": "closed",
+  "trial_summary_status": "closed",
+  "coordinating_center": "Massachusetts General Hospital",
+  "show_in_ui": true,
+  "query_hash": "c190bf554c23c45099c4464912d95b597b95c9c5",
+  "nct_id": "NCT01296555",
+  "protocol_no": "11-010",
+  "match_path": "treatment_list.step.0.arm.0.dose_level.21.match",
+  "combo_coord": "41b49a2c9facca28e6eee6e6635f578c61baf98a",
+  "is_disabled": false,
+  "cancer_type_match": "all_solid",
+  "match_type": "gene",
+  "genomic_alteration": "PIK3CA p.E545K",
+  "genomic_id": {
+    "$oid": "5dba5d6af2a9ea0029590b2b"
+  },
+  "allele_fraction": {
+    "$numberDouble": "0.06"
+  },
+  "chromosome": "3",
+  "position": {
+    "$numberInt": "178936091"
+  },
+  "reference_allele": "G",
+  "tier": {
+    "$numberInt": "2"
+  },
+  "true_cdna_change": "c.1633G>A",
+  "true_hugo_symbol": "PIK3CA",
+  "true_protein_change": "p.E545K",
+  "true_transcript_exon": {
+    "$numberInt": "10"
+  },
+  "true_variant_classification": "Missense_Mutation",
+  "variant_category": "MUTATION",
+  "wildtype": false,
+  "sort_order": [
+    {
+      "$numberInt": "-1"
+    },
+    {
+      "$numberInt": "60"
+    },
+    {
+      "$numberInt": "1"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "11010"
+    }
+  ],
+  "hash": "60afbb77d3a1fbaf2cce1778a573205ec79cca85",
+  "_me_id": "60dd20cdff51490099e12f4413d4276a",
+  "_updated": {
+    "$date": {
+      "$numberLong": "1665005145714"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a75941156"
+  },
+  "gender": "Redacted",
+  "mrn": "111111",
+  "oncotree_primary_diagnosis_name": "Glioblastoma",
+  "report_date": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "sample_id": "FS-11-111111",
+  "tumor_mutational_burden_per_megabase": {
+    "$numberDouble": "2.0"
+  },
+  "vital_status": "alive",
+  "clinical_id": {
+    "$oid": "5dcb9176f2a9ea003196b5f9"
+  },
+  "match_level": "dose",
+  "internal_id": {
+    "$numberInt": "1"
+  },
+  "reason_type": "genomic",
+  "q_depth": {
+    "$numberInt": "0"
+  },
+  "q_width": {
+    "$numberInt": "1"
+  },
+  "code": "B-1",
+  "trial_curation_level_status": "closed",
+  "trial_summary_status": "closed",
+  "coordinating_center": "Massachusetts General Hospital",
+  "show_in_ui": true,
+  "query_hash": "d08c4d23a691bbd43d0ee57dfb9e72a85b0131ad",
+  "nct_id": "NCT01296555",
+  "protocol_no": "11-010",
+  "match_path": "treatment_list.step.0.arm.0.dose_level.1.match",
+  "combo_coord": "cd1f5f4d2c618c52c48ecc1394becb4dcc9a0c59",
+  "is_disabled": false,
+  "cancer_type_match": "all_solid",
+  "match_type": "gene",
+  "genomic_alteration": "PIK3CA p.E545K",
+  "genomic_id": {
+    "$oid": "5dba5d6af2a9ea0029590b2b"
+  },
+  "allele_fraction": {
+    "$numberDouble": "0.06"
+  },
+  "chromosome": "3",
+  "position": {
+    "$numberInt": "178936091"
+  },
+  "reference_allele": "G",
+  "tier": {
+    "$numberInt": "2"
+  },
+  "true_cdna_change": "c.1633G>A",
+  "true_hugo_symbol": "PIK3CA",
+  "true_protein_change": "p.E545K",
+  "true_transcript_exon": {
+    "$numberInt": "10"
+  },
+  "true_variant_classification": "Missense_Mutation",
+  "variant_category": "MUTATION",
+  "wildtype": false,
+  "sort_order": [
+    {
+      "$numberInt": "-1"
+    },
+    {
+      "$numberInt": "60"
+    },
+    {
+      "$numberInt": "1"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "11010"
+    }
+  ],
+  "hash": "7403622ace9ede87d249d689ec86a931cde9de34",
+  "_me_id": "60dd20cdff51490099e12f4413d4276a",
+  "_updated": {
+    "$date": {
+      "$numberLong": "1665005145714"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a75941157"
+  },
+  "gender": "Redacted",
+  "mrn": "111111",
+  "oncotree_primary_diagnosis_name": "Glioblastoma",
+  "report_date": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "sample_id": "FS-11-111111",
+  "tumor_mutational_burden_per_megabase": {
+    "$numberDouble": "2.0"
+  },
+  "vital_status": "alive",
+  "clinical_id": {
+    "$oid": "5dcb9176f2a9ea003196b5f9"
+  },
+  "match_level": "dose",
+  "internal_id": {
+    "$numberInt": "10"
+  },
+  "reason_type": "genomic",
+  "q_depth": {
+    "$numberInt": "0"
+  },
+  "q_width": {
+    "$numberInt": "1"
+  },
+  "code": "H-1",
+  "trial_curation_level_status": "open",
+  "trial_summary_status": "closed",
+  "coordinating_center": "Massachusetts General Hospital",
+  "show_in_ui": true,
+  "query_hash": "7e1372a8f02bd31e55207e9d98e554241dc7f7ac",
+  "nct_id": "NCT01296555",
+  "protocol_no": "11-010",
+  "match_path": "treatment_list.step.0.arm.0.dose_level.10.match",
+  "combo_coord": "786da6848e986f237d480302a1f3c4eae498cbe6",
+  "is_disabled": false,
+  "cancer_type_match": "all_solid",
+  "match_type": "gene",
+  "genomic_alteration": "PIK3CA p.E545K",
+  "genomic_id": {
+    "$oid": "5dba5d6af2a9ea0029590b2b"
+  },
+  "allele_fraction": {
+    "$numberDouble": "0.06"
+  },
+  "chromosome": "3",
+  "position": {
+    "$numberInt": "178936091"
+  },
+  "reference_allele": "G",
+  "tier": {
+    "$numberInt": "2"
+  },
+  "true_cdna_change": "c.1633G>A",
+  "true_hugo_symbol": "PIK3CA",
+  "true_protein_change": "p.E545K",
+  "true_transcript_exon": {
+    "$numberInt": "10"
+  },
+  "true_variant_classification": "Missense_Mutation",
+  "variant_category": "MUTATION",
+  "wildtype": false,
+  "sort_order": [
+    {
+      "$numberInt": "1"
+    },
+    {
+      "$numberInt": "60"
+    },
+    {
+      "$numberInt": "1"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "11010"
+    }
+  ],
+  "hash": "e182588b3d01ec1d8e6097d816499528f6744963",
+  "_me_id": "60dd20cdff51490099e12f4413d4276a",
+  "_updated": {
+    "$date": {
+      "$numberLong": "1665005145714"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a75941169"
+  },
+  "gender": "Redacted",
+  "mrn": "444444",
+  "oncotree_primary_diagnosis_name": "Merkel Cell Carcinoma",
+  "report_date": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "sample_id": "FS-44-444444",
+  "tumor_mutational_burden_per_megabase": {
+    "$numberDouble": "2.0"
+  },
+  "vital_status": "alive",
+  "clinical_id": {
+    "$oid": "5dc44917f2a9ea002c7f734e"
+  },
+  "match_level": "arm",
+  "internal_id": {
+    "$numberInt": "23798"
+  },
+  "reason_type": "genomic",
+  "q_depth": {
+    "$numberInt": "2"
+  },
+  "q_width": {
+    "$numberInt": "1"
+  },
+  "code": "COHORT 4A",
+  "trial_curation_level_status": "closed",
+  "trial_summary_status": "open",
+  "coordinating_center": "Massachusetts General Hospital",
+  "show_in_ui": true,
+  "query_hash": "5814f394b304841d9f3e6065312957655158a1c4",
+  "nct_id": "NCT03718091",
+  "protocol_no": "18-274",
+  "match_path": "treatment_list.step.1.arm.6.match",
+  "combo_coord": "36c6078d9c7c528871eba11169a5805578c884d9",
+  "is_disabled": false,
+  "cancer_type_match": "all_solid",
+  "match_type": "gene",
+  "genomic_alteration": "FBXW7 Missense_Mutation",
+  "genomic_id": {
+    "$oid": "598570bd8db517002c1e5dd5"
+  },
+  "allele_fraction": {
+    "$numberDouble": "0.03"
+  },
+  "chromosome": "4",
+  "position": {
+    "$numberInt": "153332821"
+  },
+  "reference_allele": "GA",
+  "tier": {
+    "$numberInt": "4"
+  },
+  "true_cdna_change": "c.134_135delTCinsGG",
+  "true_hugo_symbol": "FBXW7",
+  "true_transcript_exon": {
+    "$numberInt": "2"
+  },
+  "true_variant_classification": "Missense_Mutation",
+  "variant_category": "MUTATION",
+  "wildtype": false,
+  "sort_order": [
+    {
+      "$numberInt": "-1"
+    },
+    {
+      "$numberInt": "90"
+    },
+    {
+      "$numberInt": "1"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "18274"
+    }
+  ],
+  "hash": "fe7b32b0536c18b02aa5bc4be1914fc2caa81415",
+  "_me_id": "60dd20cdff51490099e12f4413d4276a",
+  "_updated": {
+    "$date": {
+      "$numberLong": "1665005145798"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a7594116a"
+  },
+  "gender": "Redacted",
+  "mrn": "444444",
+  "oncotree_primary_diagnosis_name": "Merkel Cell Carcinoma",
+  "report_date": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "sample_id": "FS-44-444444",
+  "tumor_mutational_burden_per_megabase": {
+    "$numberDouble": "2.0"
+  },
+  "vital_status": "alive",
+  "clinical_id": {
+    "$oid": "5dc44917f2a9ea002c7f734e"
+  },
+  "match_level": "arm",
+  "internal_id": {
+    "$numberInt": "23799"
+  },
+  "reason_type": "genomic",
+  "q_depth": {
+    "$numberInt": "0"
+  },
+  "q_width": {
+    "$numberInt": "1"
+  },
+  "code": "COHORT 5",
+  "trial_curation_level_status": "closed",
+  "trial_summary_status": "open",
+  "coordinating_center": "Massachusetts General Hospital",
+  "show_in_ui": true,
+  "query_hash": "4e8a6c569656a813004a67af619622f680f52b42",
+  "nct_id": "NCT03718091",
+  "protocol_no": "18-274",
+  "match_path": "treatment_list.step.1.arm.7.match",
+  "combo_coord": "27242bea3dbce26afa51f2d6e1be9b5acf820ad3",
+  "is_disabled": false,
+  "cancer_type_match": "all_solid",
+  "match_type": "gene",
+  "genomic_alteration": "ARID1A Nonsense_Mutation",
+  "genomic_id": {
+    "$oid": "598570bd8db517002c1e5d7e"
+  },
+  "allele_fraction": {
+    "$numberDouble": "0.04"
+  },
+  "chromosome": "1",
+  "position": {
+    "$numberInt": "27057835"
+  },
+  "reference_allele": "C",
+  "tier": {
+    "$numberInt": "4"
+  },
+  "true_cdna_change": "c.1543C>T",
+  "true_hugo_symbol": "ARID1A",
+  "true_transcript_exon": {
+    "$numberInt": "3"
+  },
+  "true_variant_classification": "Nonsense_Mutation",
+  "variant_category": "MUTATION",
+  "wildtype": false,
+  "sort_order": [
+    {
+      "$numberInt": "-1"
+    },
+    {
+      "$numberInt": "90"
+    },
+    {
+      "$numberInt": "1"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "18274"
+    }
+  ],
+  "hash": "b6bd98761ee5dc6f94bab68174df834a91b98fa2",
+  "_me_id": "60dd20cdff51490099e12f4413d4276a",
+  "_updated": {
+    "$date": {
+      "$numberLong": "1665005145798"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a7594116b"
+  },
+  "gender": "Redacted",
+  "mrn": "444444",
+  "oncotree_primary_diagnosis_name": "Merkel Cell Carcinoma",
+  "report_date": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "sample_id": "FS-44-444444",
+  "tumor_mutational_burden_per_megabase": {
+    "$numberDouble": "2.0"
+  },
+  "vital_status": "alive",
+  "clinical_id": {
+    "$oid": "5dc44917f2a9ea002c7f734e"
+  },
+  "match_level": "arm",
+  "internal_id": {
+    "$numberInt": "23796"
+  },
+  "reason_type": "genomic",
+  "q_depth": {
+    "$numberInt": "2"
+  },
+  "q_width": {
+    "$numberInt": "1"
+  },
+  "code": "COHORT 3B",
+  "trial_curation_level_status": "closed",
+  "trial_summary_status": "open",
+  "coordinating_center": "Massachusetts General Hospital",
+  "show_in_ui": true,
+  "query_hash": "d3c9a358e0084d8e83d63fbb4a8cedd26588aa5d",
+  "nct_id": "NCT03718091",
+  "protocol_no": "18-274",
+  "match_path": "treatment_list.step.1.arm.4.match",
+  "combo_coord": "056ba92d0eba05ae9612936ea3e8503016ca73cc",
+  "is_disabled": false,
+  "cancer_type_match": "all_solid",
+  "match_type": "gene",
+  "genomic_alteration": "RAD51D Missense_Mutation",
+  "genomic_id": {
+    "$oid": "598570bd8db517002c1e5c31"
+  },
+  "allele_fraction": {
+    "$numberDouble": "0.08"
+  },
+  "chromosome": "17",
+  "position": {
+    "$numberInt": "33445608"
+  },
+  "reference_allele": "C",
+  "tier": {
+    "$numberInt": "4"
+  },
+  "true_cdna_change": "c.175G>T",
+  "true_hugo_symbol": "RAD51D",
+  "true_transcript_exon": {
+    "$numberInt": "3"
+  },
+  "true_variant_classification": "Missense_Mutation",
+  "variant_category": "MUTATION",
+  "wildtype": false,
+  "sort_order": [
+    {
+      "$numberInt": "-1"
+    },
+    {
+      "$numberInt": "90"
+    },
+    {
+      "$numberInt": "1"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "18274"
+    }
+  ],
+  "hash": "701f9fe463eafc1d11c8f2635b9de70676994cb2",
+  "_me_id": "60dd20cdff51490099e12f4413d4276a",
+  "_updated": {
+    "$date": {
+      "$numberLong": "1665005145798"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a7594116c"
+  },
+  "gender": "Redacted",
+  "mrn": "444444",
+  "oncotree_primary_diagnosis_name": "Merkel Cell Carcinoma",
+  "report_date": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "sample_id": "FS-44-444444",
+  "tumor_mutational_burden_per_megabase": {
+    "$numberDouble": "2.0"
+  },
+  "vital_status": "alive",
+  "clinical_id": {
+    "$oid": "5dc44917f2a9ea002c7f734e"
+  },
+  "match_level": "arm",
+  "internal_id": {
+    "$numberInt": "23791"
+  },
+  "reason_type": "genomic",
+  "q_depth": {
+    "$numberInt": "2"
+  },
+  "q_width": {
+    "$numberInt": "1"
+  },
+  "code": "T3",
+  "trial_curation_level_status": "open",
+  "trial_summary_status": "open",
+  "coordinating_center": "Massachusetts General Hospital",
+  "show_in_ui": true,
+  "query_hash": "4e8a6c569656a813004a67af619622f680f52b42",
+  "nct_id": "NCT03718091",
+  "protocol_no": "18-274",
+  "match_path": "treatment_list.step.0.arm.2.match",
+  "combo_coord": "86594ea1962569a5b20769beceb507a40892ac7f",
+  "is_disabled": false,
+  "cancer_type_match": "all_solid",
+  "match_type": "gene",
+  "genomic_alteration": "ARID1A Nonsense_Mutation",
+  "genomic_id": {
+    "$oid": "598570bd8db517002c1e5d7e"
+  },
+  "allele_fraction": {
+    "$numberDouble": "0.04"
+  },
+  "chromosome": "1",
+  "position": {
+    "$numberInt": "27057835"
+  },
+  "reference_allele": "C",
+  "tier": {
+    "$numberInt": "4"
+  },
+  "true_cdna_change": "c.1543C>T",
+  "true_hugo_symbol": "ARID1A",
+  "true_transcript_exon": {
+    "$numberInt": "3"
+  },
+  "true_variant_classification": "Nonsense_Mutation",
+  "variant_category": "MUTATION",
+  "wildtype": false,
+  "sort_order": [
+    {
+      "$numberInt": "1"
+    },
+    {
+      "$numberInt": "90"
+    },
+    {
+      "$numberInt": "1"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "18274"
+    }
+  ],
+  "hash": "3e521847be774cb87c020e4299f7e7ec12ad4af4",
+  "_me_id": "60dd20cdff51490099e12f4413d4276a",
+  "_updated": {
+    "$date": {
+      "$numberLong": "1665005145798"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a7594116d"
+  },
+  "gender": "Redacted",
+  "mrn": "444444",
+  "oncotree_primary_diagnosis_name": "Merkel Cell Carcinoma",
+  "report_date": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "sample_id": "FS-44-444444",
+  "tumor_mutational_burden_per_megabase": {
+    "$numberDouble": "2.0"
+  },
+  "vital_status": "alive",
+  "clinical_id": {
+    "$oid": "5dc44917f2a9ea002c7f734e"
+  },
+  "match_level": "arm",
+  "internal_id": {
+    "$numberInt": "23796"
+  },
+  "reason_type": "genomic",
+  "q_depth": {
+    "$numberInt": "2"
+  },
+  "q_width": {
+    "$numberInt": "1"
+  },
+  "code": "COHORT 3B",
+  "trial_curation_level_status": "closed",
+  "trial_summary_status": "open",
+  "coordinating_center": "Massachusetts General Hospital",
+  "show_in_ui": true,
+  "query_hash": "7ec118cb820e2eee7781b205f9b25429b05fe7b7",
+  "nct_id": "NCT03718091",
+  "protocol_no": "18-274",
+  "match_path": "treatment_list.step.1.arm.4.match",
+  "combo_coord": "4261c940a18bb4dcd703e95dea750797313f1308",
+  "is_disabled": false,
+  "cancer_type_match": "all_solid",
+  "match_type": "gene",
+  "genomic_alteration": "BRCA2 Missense_Mutation",
+  "genomic_id": {
+    "$oid": "598570bd8db517002c1e5da8"
+  },
+  "allele_fraction": {
+    "$numberDouble": "0.51"
+  },
+  "chromosome": "13",
+  "position": {
+    "$numberInt": "32900285"
+  },
+  "reference_allele": "C",
+  "tier": {
+    "$numberInt": "4"
+  },
+  "true_cdna_change": "c.473C>T",
+  "true_hugo_symbol": "BRCA2",
+  "true_transcript_exon": {
+    "$numberInt": "5"
+  },
+  "true_variant_classification": "Missense_Mutation",
+  "variant_category": "MUTATION",
+  "wildtype": false,
+  "sort_order": [
+    {
+      "$numberInt": "-1"
+    },
+    {
+      "$numberInt": "90"
+    },
+    {
+      "$numberInt": "1"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "18274"
+    }
+  ],
+  "hash": "dc1e9b61bd8dfebb071178d08655f6e3cc7ab5a6",
+  "_me_id": "60dd20cdff51490099e12f4413d4276a",
+  "_updated": {
+    "$date": {
+      "$numberLong": "1665005145798"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a7594116e"
+  },
+  "gender": "Redacted",
+  "mrn": "444444",
+  "oncotree_primary_diagnosis_name": "Merkel Cell Carcinoma",
+  "report_date": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "sample_id": "FS-44-444444",
+  "tumor_mutational_burden_per_megabase": {
+    "$numberDouble": "2.0"
+  },
+  "vital_status": "alive",
+  "clinical_id": {
+    "$oid": "5dc44917f2a9ea002c7f734e"
+  },
+  "match_level": "arm",
+  "internal_id": {
+    "$numberInt": "23794"
+  },
+  "reason_type": "genomic",
+  "q_depth": {
+    "$numberInt": "2"
+  },
+  "q_width": {
+    "$numberInt": "1"
+  },
+  "code": "COHORT 3A",
+  "trial_curation_level_status": "closed",
+  "trial_summary_status": "open",
+  "coordinating_center": "Massachusetts General Hospital",
+  "show_in_ui": true,
+  "query_hash": "7ec118cb820e2eee7781b205f9b25429b05fe7b7",
+  "nct_id": "NCT03718091",
+  "protocol_no": "18-274",
+  "match_path": "treatment_list.step.1.arm.2.match",
+  "combo_coord": "2ad1c05b53a28a8c5840847d70d6f5b342188fab",
+  "is_disabled": false,
+  "cancer_type_match": "all_solid",
+  "match_type": "gene",
+  "genomic_alteration": "BRCA2 Missense_Mutation",
+  "genomic_id": {
+    "$oid": "598570bd8db517002c1e5da8"
+  },
+  "allele_fraction": {
+    "$numberDouble": "0.51"
+  },
+  "chromosome": "13",
+  "position": {
+    "$numberInt": "32900285"
+  },
+  "reference_allele": "C",
+  "tier": {
+    "$numberInt": "4"
+  },
+  "true_cdna_change": "c.473C>T",
+  "true_hugo_symbol": "BRCA2",
+  "true_transcript_exon": {
+    "$numberInt": "5"
+  },
+  "true_variant_classification": "Missense_Mutation",
+  "variant_category": "MUTATION",
+  "wildtype": false,
+  "sort_order": [
+    {
+      "$numberInt": "-1"
+    },
+    {
+      "$numberInt": "90"
+    },
+    {
+      "$numberInt": "1"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "18274"
+    }
+  ],
+  "hash": "10739bf83eb67fef393839b9bbafe8680face568",
+  "_me_id": "60dd20cdff51490099e12f4413d4276a",
+  "_updated": {
+    "$date": {
+      "$numberLong": "1665005145798"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a7594116f"
+  },
+  "gender": "Redacted",
+  "mrn": "444444",
+  "oncotree_primary_diagnosis_name": "Merkel Cell Carcinoma",
+  "report_date": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "sample_id": "FS-44-444444",
+  "tumor_mutational_burden_per_megabase": {
+    "$numberDouble": "2.0"
+  },
+  "vital_status": "alive",
+  "clinical_id": {
+    "$oid": "5dc44917f2a9ea002c7f734e"
+  },
+  "match_level": "arm",
+  "internal_id": {
+    "$numberInt": "23791"
+  },
+  "reason_type": "genomic",
+  "q_depth": {
+    "$numberInt": "2"
+  },
+  "q_width": {
+    "$numberInt": "1"
+  },
+  "code": "T3",
+  "trial_curation_level_status": "open",
+  "trial_summary_status": "open",
+  "coordinating_center": "Massachusetts General Hospital",
+  "show_in_ui": true,
+  "query_hash": "d3c9a358e0084d8e83d63fbb4a8cedd26588aa5d",
+  "nct_id": "NCT03718091",
+  "protocol_no": "18-274",
+  "match_path": "treatment_list.step.0.arm.2.match",
+  "combo_coord": "335e24ffc41144bbcda08b65b0b897b6b18755b7",
+  "is_disabled": false,
+  "cancer_type_match": "all_solid",
+  "match_type": "gene",
+  "genomic_alteration": "RAD51D Missense_Mutation",
+  "genomic_id": {
+    "$oid": "598570bd8db517002c1e5c31"
+  },
+  "allele_fraction": {
+    "$numberDouble": "0.08"
+  },
+  "chromosome": "17",
+  "position": {
+    "$numberInt": "33445608"
+  },
+  "reference_allele": "C",
+  "tier": {
+    "$numberInt": "4"
+  },
+  "true_cdna_change": "c.175G>T",
+  "true_hugo_symbol": "RAD51D",
+  "true_transcript_exon": {
+    "$numberInt": "3"
+  },
+  "true_variant_classification": "Missense_Mutation",
+  "variant_category": "MUTATION",
+  "wildtype": false,
+  "sort_order": [
+    {
+      "$numberInt": "1"
+    },
+    {
+      "$numberInt": "90"
+    },
+    {
+      "$numberInt": "1"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "18274"
+    }
+  ],
+  "hash": "cd88b4494bbd9b8afbead058329727186ac72bb2",
+  "_me_id": "60dd20cdff51490099e12f4413d4276a",
+  "_updated": {
+    "$date": {
+      "$numberLong": "1665005145798"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a75941170"
+  },
+  "gender": "Redacted",
+  "mrn": "444444",
+  "oncotree_primary_diagnosis_name": "Merkel Cell Carcinoma",
+  "report_date": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "sample_id": "FS-44-444444",
+  "tumor_mutational_burden_per_megabase": {
+    "$numberDouble": "2.0"
+  },
+  "vital_status": "alive",
+  "clinical_id": {
+    "$oid": "5dc44917f2a9ea002c7f734e"
+  },
+  "match_level": "arm",
+  "internal_id": {
+    "$numberInt": "23791"
+  },
+  "reason_type": "genomic",
+  "q_depth": {
+    "$numberInt": "2"
+  },
+  "q_width": {
+    "$numberInt": "1"
+  },
+  "code": "T3",
+  "trial_curation_level_status": "open",
+  "trial_summary_status": "open",
+  "coordinating_center": "Massachusetts General Hospital",
+  "show_in_ui": true,
+  "query_hash": "1161e4de74af0cc0d7c81bed3f3ff183e745d2b2",
+  "nct_id": "NCT03718091",
+  "protocol_no": "18-274",
+  "match_path": "treatment_list.step.0.arm.2.match",
+  "combo_coord": "f178a6a8b8241c3bacc57dd092bd12d8a97d4b3a",
+  "is_disabled": false,
+  "cancer_type_match": "all_solid",
+  "match_type": "gene",
+  "genomic_alteration": "FBXW7 Missense_Mutation",
+  "genomic_id": {
+    "$oid": "598570bd8db517002c1e5dd5"
+  },
+  "allele_fraction": {
+    "$numberDouble": "0.03"
+  },
+  "chromosome": "4",
+  "position": {
+    "$numberInt": "153332821"
+  },
+  "reference_allele": "GA",
+  "tier": {
+    "$numberInt": "4"
+  },
+  "true_cdna_change": "c.134_135delTCinsGG",
+  "true_hugo_symbol": "FBXW7",
+  "true_transcript_exon": {
+    "$numberInt": "2"
+  },
+  "true_variant_classification": "Missense_Mutation",
+  "variant_category": "MUTATION",
+  "wildtype": false,
+  "sort_order": [
+    {
+      "$numberInt": "1"
+    },
+    {
+      "$numberInt": "90"
+    },
+    {
+      "$numberInt": "1"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "18274"
+    }
+  ],
+  "hash": "1862b5fdbde4c20cf8f75e0f92a327c5c2958c7b",
+  "_me_id": "60dd20cdff51490099e12f4413d4276a",
+  "_updated": {
+    "$date": {
+      "$numberLong": "1665005145798"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a75941171"
+  },
+  "gender": "Redacted",
+  "mrn": "444444",
+  "oncotree_primary_diagnosis_name": "Merkel Cell Carcinoma",
+  "report_date": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "sample_id": "FS-44-444444",
+  "tumor_mutational_burden_per_megabase": {
+    "$numberDouble": "2.0"
+  },
+  "vital_status": "alive",
+  "clinical_id": {
+    "$oid": "5dc44917f2a9ea002c7f734e"
+  },
+  "match_level": "arm",
+  "internal_id": {
+    "$numberInt": "23791"
+  },
+  "reason_type": "genomic",
+  "q_depth": {
+    "$numberInt": "2"
+  },
+  "q_width": {
+    "$numberInt": "1"
+  },
+  "code": "T3",
+  "trial_curation_level_status": "open",
+  "trial_summary_status": "open",
+  "coordinating_center": "Massachusetts General Hospital",
+  "show_in_ui": true,
+  "query_hash": "7ec118cb820e2eee7781b205f9b25429b05fe7b7",
+  "nct_id": "NCT03718091",
+  "protocol_no": "18-274",
+  "match_path": "treatment_list.step.0.arm.2.match",
+  "combo_coord": "2021c3b5712ddf58ac57e67250a23526cf567217",
+  "is_disabled": false,
+  "cancer_type_match": "all_solid",
+  "match_type": "gene",
+  "genomic_alteration": "BRCA2 Missense_Mutation",
+  "genomic_id": {
+    "$oid": "598570bd8db517002c1e5da8"
+  },
+  "allele_fraction": {
+    "$numberDouble": "0.51"
+  },
+  "chromosome": "13",
+  "position": {
+    "$numberInt": "32900285"
+  },
+  "reference_allele": "C",
+  "tier": {
+    "$numberInt": "4"
+  },
+  "true_cdna_change": "c.473C>T",
+  "true_hugo_symbol": "BRCA2",
+  "true_transcript_exon": {
+    "$numberInt": "5"
+  },
+  "true_variant_classification": "Missense_Mutation",
+  "variant_category": "MUTATION",
+  "wildtype": false,
+  "sort_order": [
+    {
+      "$numberInt": "1"
+    },
+    {
+      "$numberInt": "90"
+    },
+    {
+      "$numberInt": "1"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "99"
+    },
+    {
+      "$numberInt": "18274"
+    }
+  ],
+  "hash": "3782a590d1cfcfbc164cfebf67dacc9eb56cbe43",
+  "_me_id": "60dd20cdff51490099e12f4413d4276a",
+  "_updated": {
+    "$date": {
+      "$numberLong": "1665005145798"
+    }
+  }
+}

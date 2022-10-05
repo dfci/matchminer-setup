@@ -1,0 +1,35 @@
+{
+  "_id": {
+    "$oid": "633c4b96b396ef9febf075e9"
+  },
+  "last_update": {
+    "$date": {
+      "$numberLong": "1664451761000"
+    }
+  },
+  "new_clinical": {
+    "$numberInt": "5"
+  },
+  "new_genomic": null,
+  "updated_genomic": null,
+  "test_name": "oncopanel",
+  "updated_clinical": {
+    "$numberInt": "0"
+  },
+  "deleted": {
+    "$numberInt": "0"
+  },
+  "silent": false,
+  "data_push_id": "local_push",
+  "_updated": {
+    "$date": {
+      "$numberLong": "1664895894000"
+    }
+  },
+  "_created": {
+    "$date": {
+      "$numberLong": "1664895894000"
+    }
+  },
+  "_etag": "665d7013300b0856f9bd1273a883bda017bab384"
+}

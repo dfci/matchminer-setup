@@ -1,0 +1,38 @@
+{
+    "EPIC": false,
+    "accessRequestFormLink": "https://example.com",
+    "api": {
+        "endpoint": "/api",
+        "host": "http://localhost"
+    },
+    "bannerExpirationDays": 14,
+    "cBio": false,
+    "demo": true,
+    "devUser": {
+        "token": "fb4d6830-d3aa-481b-bcd6-270d69790e11",
+        "user_id": "577cf6ef2b9920002cef0337"
+    },
+    "elasticsearch": {
+        "index": "matchminer",
+        "proxy": "http://localhost/api/es"
+    },
+    "name": "development",
+    "resources": {
+        "ctgov_base": "https://clinicaltrials.gov/ct2/show/",
+        "email": "help@institute.edu",
+        "emailSecondary": "help@institute.edu",
+        "institution": "DEMO",
+        "institutionFull": "DEMO Institution",
+        "logo": "dfci.jpg",
+        "oncpro_base": ""
+    },
+    "samlAuthentication": false,
+    "sessionTimeout": {
+        "idleAllowed": 2700,
+        "idleCountdown": 30
+    },
+    "slsUrl": "",
+    "tracking": {
+        "piwik_site_id": 3
+    }
+}

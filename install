@@ -1,39 +1,78 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# generate [N] generates a random alphabetical string of length N (defaults to 20).
+generate() {
+  LC_ALL=C tr -dc 'a-zA-Z' < /dev/urandom | head -c"${1:-20}" || test $? -eq 141 ;
+  echo "";
+}
+
+# die [LINES...] exits with an error message
+die() {
+  echo "Failed to start MatchMiner:"
+  for LINE in "$@"
+  do
+      echo "$LINE"
+  done
+  exit 1
+}
+
+# wait_for_url [URL] waits for URL to become available
+wait_for_url() {
+  curl --fail \
+    --location \
+    --max-time 1 \
+    --retry 30 \
+    --retry-delay 1 \
+    --retry-connrefused \
+    --silent \
+    --show-error \
+    --output /dev/null \
+    "$1"
+}
+
 # Ensure that docker is installed:
 if ! which docker >/dev/null
 then
-  echo 'this script requires docker'
-  exit 1
+  die 'docker is not installed'
 fi
 
 # Ensure that docker-compose is installed:
 if ! which docker-compose >/dev/null
 then
-  echo 'this script requires docker-compose'
-  exit 1
+  die 'docker-compose is not installed'
 fi
 
 # Ensure that we can connect to Docker:
 ERRS="$(docker info --format '{{range .ServerErrors}}{{.}}{{end}}' 2>&1)"
 if ! test -z "$ERRS"
 then
-  echo 'cannot connect to docker:'
-  echo "$ERRS"
-  exit 1
+  die 'cannot connect to docker:' "$ERRS"
+fi
+
+# Disable annoying Docker message:
+export DOCKER_SCAN_SUGGEST=false
+
+# MATCHMINER_BUILD_PATH, if set, will cause us to rebuild the Docker images
+# from repositories in the specified path:
+if test -n "${MATCHMINER_BUILD_PATH:-}"
+then
+  pushd "$MATCHMINER_BUILD_PATH" >/dev/null
+  MATCHMINER_BUILD_PATH="$(pwd)"
+  popd > /dev/null
+else
+  MATCHMINER_BUILD_PATH=""
 fi
 
 # Start setup; cd into the path of this script:
 if test -z "${BASH_SOURCE[0]:-}"
 then
-  echo 'failed to find script path'
-  exit 1
+  die 'failed to find script path'
 fi
 pushd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null
 
 # Take down any existing services:
-echo 'Taking down any existing services...'
+echo 'Taking down MatchMiner if it is already running...'
 docker-compose down --remove-orphans --volumes --timeout 5 --rmi local
 
 # Ensure that port 80 is not in use (macOS only):
@@ -41,8 +80,7 @@ if test "$(uname -s)" = "Darwin" && which lsof >/dev/null 2>/dev/null
 then
   if lsof -iTCP:80 -sTCP:LISTEN >/dev/null 2>/dev/null
   then
-    echo 'Cannot start: port 80 is already in use'
-    exit 1
+    die 'Cannot start: port 80 is already in use'
   fi
 fi
 
@@ -50,6 +88,13 @@ fi
 # (This is basically the same as docker-compose up)
 echo 'Pulling latest versions of images...'
 docker-compose pull
+if test -n "$MATCHMINER_BUILD_PATH"
+then
+  echo "Performing build from ${MATCHMINER_BUILD_PATH}..."
+  MATCHMINER_BUILD_PATH="$MATCHMINER_BUILD_PATH" docker-compose build
+else
+  echo "Not rebuilding images..."
+fi
 echo 'Creating containers...'
 docker-compose create --pull never --no-build
 echo 'Starting containers...'
@@ -58,55 +103,58 @@ docker-compose start
 # Wait for MongoDB to start:
 echo 'Waiting for MongoDB to start...'
 START_WAIT="$SECONDS"
-while ! docker-compose exec mongo mongo --eval ";" >/dev/null 2>/dev/null
+# Note: MongoDB will bind to localhost immediately, but it won't bind to 'mongo' until setup is done
+while ! docker-compose exec mongo mongosh --quiet --eval ";" mongodb://mongo:27017 >/dev/null 2>/dev/null
 do
   sleep 1
-  if test "$((SECONDS - START_WAIT))" -ge 15
+  if test "$((SECONDS - START_WAIT))" -ge 30
   then
     echo "MongoDB failed to start; check docker-compose logs to debug"
     exit 1
   fi
 done
 
-# Set up MongoDB replica set:
-echo 'Initializing mongodb as replica set...'
-docker-compose exec mongo mongo matchminer --quiet --eval "rs.initiate();" >/dev/null
-
-# Load demo data into MongoDB:
-echo "Loading demo data into mongo..."
-rm -rf ./matchminer
-tar -xzf matchminer.tar.gz
-docker-compose cp matchminer mongo:/
-rm -rf ./matchminer
-docker-compose exec mongo mongorestore --quiet matchminer
-
-# Setup complete!
-popd >/dev/null
-
-# Helper to wait for a URL to become available:
-wait_for_url() {
-  curl --fail --location --max-time 1 --retry 15 --retry-delay 1 --retry-connrefused "$1" >/dev/null 2>/dev/null;
-}
+# Restart matchminer-api after MongoDB up
+echo "Restarting MatchMiner API now that mongo is available..."
+docker-compose restart matchminer-api
 
 # Wait for MatchMiner to be ready:
 echo "Waiting for MatchMiner UI to become ready..."
 if ! wait_for_url http://localhost
 then
-  echo "Startup failed! Check docker-compose logs to debug..."
-  exit 1
+  die "Startup failed! Check docker-compose logs to debug..."
 fi
 echo "Waiting for MatchMiner API to become ready..."
 if ! wait_for_url http://localhost/api/info
 then
-  echo "Startup failed! Check docker-compose logs to debug..."
-  exit 1
-fi
-echo "Waiting for MatchMiner ElasticSearch to become ready..."
-if ! wait_for_url http://localhost/elasticsearch
-then
-  echo "Startup failed! Check docker-compose logs to debug..."
-  exit 1
+  die "Startup failed! Check docker-compose logs to debug..."
 fi
 
+echo "Waiting for MatchMiner ElasticSearch to become ready..."
+if ! wait_for_url http://localhost/api/es/_nodes/_local
+then
+  die "Startup failed! Check docker-compose logs to debug..."
+fi
+
+echo "Resetting elasticsearch..."
+curl --netrc-file ./netrc --fail --location --silent --show-error --output /dev/null -X POST http://localhost/api/reset_elasticsearch
+
 # Notify user:
-echo "Success! MatchMiner is now available at: http://localhost"
+echo "MatchMiner started successfully!"
+echo "The UI is now available at: http://localhost"
+echo "To manage services, enter the directory '$(pwd)' and run docker-compose."
+if test "${MATCHMINER_NO_OPEN_BROWSER:-}" = "1"
+then
+  echo "Not opening browser!"
+elif which xdg-open >/dev/null 2>/dev/null
+then
+  echo "Opening browser..."
+  xdg-open http://localhost
+elif test "$(uname -s)" = "Darwin"
+then
+  echo "Opening browser..."
+  open http://localhost
+fi
+
+# Setup complete!
+popd >/dev/null

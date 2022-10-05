@@ -1,0 +1,95 @@
+{
+  "indexes": [
+    {
+      "v": {
+        "$numberInt": "2"
+      },
+      "key": {
+        "_id": {
+          "$numberInt": "1"
+        }
+      },
+      "name": "_id_"
+    },
+    {
+      "v": {
+        "$numberInt": "2"
+      },
+      "key": {
+        "clinical_id": {
+          "$numberInt": "1"
+        }
+      },
+      "name": "clinical_id_1"
+    },
+    {
+      "v": {
+        "$numberInt": "2"
+      },
+      "key": {
+        "hash": {
+          "$numberInt": "1"
+        }
+      },
+      "name": "hash_1"
+    },
+    {
+      "v": {
+        "$numberInt": "2"
+      },
+      "key": {
+        "is_disabled": {
+          "$numberInt": "1"
+        }
+      },
+      "name": "is_disabled_1"
+    },
+    {
+      "v": {
+        "$numberInt": "2"
+      },
+      "key": {
+        "mrn": {
+          "$numberInt": "1"
+        }
+      },
+      "name": "mrn_1"
+    },
+    {
+      "v": {
+        "$numberInt": "2"
+      },
+      "key": {
+        "protocol_no": {
+          "$numberInt": "1"
+        }
+      },
+      "name": "protocol_no_1"
+    },
+    {
+      "v": {
+        "$numberInt": "2"
+      },
+      "key": {
+        "sample_id": {
+          "$numberInt": "1"
+        }
+      },
+      "name": "sample_id_1"
+    },
+    {
+      "v": {
+        "$numberInt": "2"
+      },
+      "key": {
+        "show_in_ui": {
+          "$numberInt": "1"
+        }
+      },
+      "name": "show_in_ui_1"
+    }
+  ],
+  "uuid": "646f395eee674c58b3124e350498fcd1",
+  "collectionName": "trial_match",
+  "type": "collection"
+}

@@ -1,0 +1,55 @@
+{
+  "_id": {
+    "$oid": "633df6593f8f663a7594114b"
+  },
+  "clinical_id": {
+    "$oid": "5dcb9176f2a9ea003196b5f9"
+  },
+  "run_history": [
+    "60dd20cdff51490099e12f4413d4276a"
+  ]
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a7594114c"
+  },
+  "clinical_id": {
+    "$oid": "5dca21b721730300312d4836"
+  },
+  "run_history": [
+    "60dd20cdff51490099e12f4413d4276a"
+  ]
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a7594114d"
+  },
+  "clinical_id": {
+    "$oid": "5dcb90fdf2a9ea002ecc7afe"
+  },
+  "run_history": [
+    "60dd20cdff51490099e12f4413d4276a"
+  ]
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a7594114e"
+  },
+  "clinical_id": {
+    "$oid": "5dc44917f2a9ea002c7f734e"
+  },
+  "run_history": [
+    "60dd20cdff51490099e12f4413d4276a"
+  ]
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a7594114f"
+  },
+  "clinical_id": {
+    "$oid": "5dbe524ab46b750032c82a20"
+  },
+  "run_history": [
+    "60dd20cdff51490099e12f4413d4276a"
+  ]
+}
