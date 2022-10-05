@@ -1,558 +1,558 @@
 {
-	"_id": {
-		"$oid": "5dc44917f2a9ea002c7f734e"
-	},
-	"_created": {
-		"$date": {
-			"$numberLong": "1573144855000"
-		}
-	},
-	"_etag": "7fbf0feee09105d77a2eb42fe819d9ce47761bff",
-	"_updated": {
-		"$date": {
-			"$numberLong": "1573144855000"
-		}
-	},
-	"ALL_PROFILE_PERCENTILE": {
-		"$numberDouble": "0.0"
-	},
-	"ALT_MRN": "",
-	"BIRTH_DATE": {
-		"$date": {
-			"$numberLong": "-2208952800000"
-		}
-	},
-	"BLOCK_NUMBER": "Redacted",
-	"CANCER_TYPE_PERCENTILE": {
-		"$numberDouble": "0.0"
-	},
-	"CASE_COUNT": {
-		"$numberDouble": "12345.0"
-	},
-	"CNV_RESULTS": "Has CNV Results",
-	"CONSENT_17000": "Y",
-	"CRIS_YN": "Y",
-	"data_push_id": "2019-11-07 11:35:04",
-	"DATE_RECEIVED_AT_SEQ_CENTER": {
-		"$date": {
-			"$numberLong": "-2208952800000"
-		}
-	},
-	"DISEASE_CENTER_DESCR": "CUTANEOUS ONCOLOGY",
-	"FIRST_LAST": "",
-	"FIRST_NAME": "",
-	"GENDER": "Redacted",
-	"LAST_FIRST": "",
-	"LAST_NAME": "",
-	"MEAN_SAMPLE_COVERAGE": {
-		"$numberDouble": "123.0"
-	},
-	"METAMAIN_COUNT": {
-		"$numberDouble": "1234.0"
-	},
-	"MMR_STATUS": "Proficient (MMR-P / MSS)",
-	"MRN": "444444",
-	"ONCOTREE_BIOPSY_SITE": "LYMPH",
-	"ONCOTREE_BIOPSY_SITE_NAME": "Lymph",
-	"ONCOTREE_BIOPSY_SITE_TYPE": "Metastatic Recurrence",
-	"ONCOTREE_PRIMARY_DIAGNOSIS": "MCC",
-	"ONCOTREE_PRIMARY_DIAGNOSIS_META": "Skin Cancer, Non-Melanoma",
-	"ONCOTREE_PRIMARY_DIAGNOSIS_NAME": "Merkel Cell Carcinoma",
-	"ORD_PHYSICIAN_EMAIL": "Redacted",
-	"ORD_PHYSICIAN_NAME": "Redacted",
-	"ORD_PHYSICIAN_NPI": {
-		"$numberDouble": "12345.0"
-	},
-	"PANEL_VERSION": {
-		"$numberInt": "3"
-	},
-	"PATHOLOGIST_NAME": "Redacted",
-	"PCT_TARGET_BASE": {
-		"$numberDouble": "0.99"
-	},
-	"PDF_LAYOUT_VERSION": {
-		"$numberInt": "3"
-	},
-	"POWERPATH_PATIENT_ID": "Redacted",
-	"QC_RESULT": "PASS",
-	"QUESTION1_YN": "NA",
-	"QUESTION2_YN": "NA",
-	"QUESTION3_YN": "NA",
-	"QUESTION4_YN": "NA",
-	"QUESTION5_YN": "NA",
-	"REPORT_COMMENT": "An example comment added to a patient's sequencing report",
-	"REPORT_DATE": {
-		"$date": {
-			"$numberLong": "-2208952800000"
-		}
-	},
-	"REPORT_VERSION": {
-		"$numberInt": "1"
-	},
-	"SAMPLE_ID": "FS-44-444444",
-	"SNV_RESULTS": "Has SNV Results",
-	"TEST_TYPE": "PROFILECOHORT",
-	"TOTAL_ALIGNED_READS": {
-		"$numberDouble": "1.2345678E+07"
-	},
-	"TOTAL_READS": {
-		"$numberDouble": "1.2345678E+07"
-	},
-	"TUMOR_MUTATIONAL_BURDEN_PER_MEGABASE": {
-		"$numberDouble": "2.0"
-	},
-	"TUMOR_PURITY_PERCENT": {
-		"$numberDouble": "0.5"
-	},
-	"VITAL_STATUS": "alive",
-	"BIRTH_DATE_INT": {
-		"$numberInt": "19000101"
-	},
-	"TEST_NAME": "oncopanel"
+  "_id": {
+    "$oid": "5dbe524ab46b750032c82a20"
+  },
+  "_created": {
+    "$date": {
+      "$numberLong": "1572753994000"
+    }
+  },
+  "_etag": "166d3a173ce016e2111d1a03b6b91b49026fc0ef",
+  "_updated": {
+    "$date": {
+      "$numberLong": "1572753994000"
+    }
+  },
+  "ALL_PROFILE_PERCENTILE": {
+    "$numberDouble": "0.0"
+  },
+  "ALT_MRN": "",
+  "BIRTH_DATE": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "BLOCK_NUMBER": "Redacted",
+  "CANCER_TYPE_PERCENTILE": {
+    "$numberDouble": "0.0"
+  },
+  "CASE_COUNT": {
+    "$numberDouble": "12345.0"
+  },
+  "CNV_RESULTS": "Has CNV Results",
+  "CONSENT_17000": "Y",
+  "CRIS_YN": "Y",
+  "data_push_id": "2019-11-03 00:01:14",
+  "DATE_RECEIVED_AT_SEQ_CENTER": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "FIRST_LAST": "",
+  "FIRST_NAME": "",
+  "GENDER": "Redacted",
+  "LAST_FIRST": "",
+  "LAST_NAME": "",
+  "MEAN_SAMPLE_COVERAGE": {
+    "$numberDouble": "123.0"
+  },
+  "METAMAIN_COUNT": {
+    "$numberDouble": "1234.0"
+  },
+  "MMR_STATUS": "Proficient (MMR-P / MSS)",
+  "MRN": "555555",
+  "ONCOTREE_BIOPSY_SITE": "BOWEL",
+  "ONCOTREE_BIOPSY_SITE_NAME": "Bowel",
+  "ONCOTREE_BIOPSY_SITE_TYPE": "Primary",
+  "ONCOTREE_PRIMARY_DIAGNOSIS": "COAD",
+  "ONCOTREE_PRIMARY_DIAGNOSIS_META": "Colorectal Cancer",
+  "ONCOTREE_PRIMARY_DIAGNOSIS_NAME": "Colon Adenocarcinoma",
+  "ORD_PHYSICIAN_NAME": "Redacted",
+  "ORD_PHYSICIAN_NPI": {
+    "$numberDouble": "12345.0"
+  },
+  "PANEL_VERSION": {
+    "$numberInt": "3"
+  },
+  "PATHOLOGIST_NAME": "Redacted",
+  "PCT_TARGET_BASE": {
+    "$numberDouble": "0.99"
+  },
+  "PDF_LAYOUT_VERSION": {
+    "$numberInt": "3"
+  },
+  "POWERPATH_PATIENT_ID": "Redacted",
+  "QC_RESULT": "PASS",
+  "QUESTION1_YN": "Y",
+  "QUESTION2_YN": "Y",
+  "QUESTION3_YN": "Y",
+  "QUESTION4_YN": "Y",
+  "QUESTION5_YN": "Y",
+  "REPORT_COMMENT": "An example comment added to a patient's sequencing report",
+  "REPORT_DATE": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "REPORT_VERSION": {
+    "$numberInt": "1"
+  },
+  "SAMPLE_ID": "FS-55-555555",
+  "SNV_RESULTS": "Has SNV Results",
+  "TEST_TYPE": "CLINICAL",
+  "TOTAL_ALIGNED_READS": {
+    "$numberDouble": "1.2345678E+07"
+  },
+  "TOTAL_READS": {
+    "$numberDouble": "1.2345678E+07"
+  },
+  "TUMOR_MUTATIONAL_BURDEN_PER_MEGABASE": {
+    "$numberDouble": "2.0"
+  },
+  "TUMOR_PURITY_PERCENT": {
+    "$numberDouble": "0.5"
+  },
+  "VITAL_STATUS": "alive",
+  "ORD_PHYSICIAN_EMAIL": "Redacted",
+  "BIRTH_DATE_INT": {
+    "$numberInt": "19000101"
+  },
+  "TEST_NAME": "oncopanel"
 }
 {
-	"_id": {
-		"$oid": "5dca21b721730300312d4836"
-	},
-	"_created": {
-		"$date": {
-			"$numberLong": "1573527991000"
-		}
-	},
-	"_etag": "0abdf10928efc53ecabf7b7f40558357adefd7de",
-	"_updated": {
-		"$date": {
-			"$numberLong": "1573527991000"
-		}
-	},
-	"ALL_PROFILE_PERCENTILE": {
-		"$numberDouble": "0.0"
-	},
-	"ALT_MRN": "",
-	"BIRTH_DATE": {
-		"$date": {
-			"$numberLong": "-2208952800000"
-		}
-	},
-	"BLOCK_NUMBER": "Redacted",
-	"CANCER_TYPE_PERCENTILE": {
-		"$numberDouble": "0.0"
-	},
-	"CASE_COUNT": {
-		"$numberDouble": "12345.0"
-	},
-	"CNV_RESULTS": "Has CNV Results",
-	"CONSENT_17000": "Y",
-	"CRIS_YN": "Y",
-	"data_push_id": "2019-11-11 22:01:03",
-	"DATE_RECEIVED_AT_SEQ_CENTER": {
-		"$date": {
-			"$numberLong": "-2208952800000"
-		}
-	},
-	"DISEASE_CENTER_DESCR": "GYNECOLOGIC ONCOLOGY",
-	"FIRST_LAST": "",
-	"FIRST_NAME": "",
-	"GENDER": "Redacted",
-	"LAST_FIRST": "",
-	"LAST_NAME": "",
-	"MEAN_SAMPLE_COVERAGE": {
-		"$numberDouble": "123.0"
-	},
-	"METAMAIN_COUNT": {
-		"$numberDouble": "1234.0"
-	},
-	"MMR_STATUS": "Proficient (MMR-P / MSS)",
-	"MRN": "333333",
-	"ONCOTREE_BIOPSY_SITE": "UTERUS",
-	"ONCOTREE_BIOPSY_SITE_NAME": "Uterus",
-	"ONCOTREE_BIOPSY_SITE_TYPE": "Primary",
-	"ONCOTREE_PRIMARY_DIAGNOSIS": "UCS",
-	"ONCOTREE_PRIMARY_DIAGNOSIS_META": "Endometrial Cancer",
-	"ONCOTREE_PRIMARY_DIAGNOSIS_NAME": "Uterine Carcinosarcoma/Uterine Malignant Mixed Mullerian Tumor",
-	"ORD_PHYSICIAN_EMAIL": "Redacted",
-	"ORD_PHYSICIAN_NAME": "Redacted",
-	"ORD_PHYSICIAN_NPI": {
-		"$numberDouble": "12345.0"
-	},
-	"PANEL_VERSION": {
-		"$numberInt": "3"
-	},
-	"PATHOLOGIST_NAME": "Redacted",
-	"PCT_TARGET_BASE": {
-		"$numberDouble": "0.99"
-	},
-	"PDF_LAYOUT_VERSION": {
-		"$numberInt": "3"
-	},
-	"POWERPATH_PATIENT_ID": "Redacted",
-	"QC_RESULT": "PASS",
-	"QUESTION1_YN": "NA",
-	"QUESTION2_YN": "NA",
-	"QUESTION3_YN": "NA",
-	"QUESTION4_YN": "NA",
-	"QUESTION5_YN": "NA",
-	"REPORT_COMMENT": "An example comment added to a patient's sequencing report",
-	"REPORT_DATE": {
-		"$date": {
-			"$numberLong": "-2208952800000"
-		}
-	},
-	"REPORT_VERSION": {
-		"$numberInt": "1"
-	},
-	"SAMPLE_ID": "FS-33-333333",
-	"SNV_RESULTS": "Has SNV Results",
-	"TEST_TYPE": "PROFILECOHORT",
-	"TOTAL_ALIGNED_READS": {
-		"$numberDouble": "1.2345678E+07"
-	},
-	"TOTAL_READS": {
-		"$numberDouble": "1.2345678E+07"
-	},
-	"TUMOR_MUTATIONAL_BURDEN_PER_MEGABASE": {
-		"$numberDouble": "2.0"
-	},
-	"TUMOR_PURITY_PERCENT": {
-		"$numberDouble": "0.5"
-	},
-	"VITAL_STATUS": "alive",
-	"BIRTH_DATE_INT": {
-		"$numberInt": "19000101"
-	},
-	"TEST_NAME": "oncopanel"
+  "_id": {
+    "$oid": "5dc44917f2a9ea002c7f734e"
+  },
+  "_created": {
+    "$date": {
+      "$numberLong": "1573144855000"
+    }
+  },
+  "_etag": "7fbf0feee09105d77a2eb42fe819d9ce47761bff",
+  "_updated": {
+    "$date": {
+      "$numberLong": "1573144855000"
+    }
+  },
+  "ALL_PROFILE_PERCENTILE": {
+    "$numberDouble": "0.0"
+  },
+  "ALT_MRN": "",
+  "BIRTH_DATE": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "BLOCK_NUMBER": "Redacted",
+  "CANCER_TYPE_PERCENTILE": {
+    "$numberDouble": "0.0"
+  },
+  "CASE_COUNT": {
+    "$numberDouble": "12345.0"
+  },
+  "CNV_RESULTS": "Has CNV Results",
+  "CONSENT_17000": "Y",
+  "CRIS_YN": "Y",
+  "data_push_id": "2019-11-07 11:35:04",
+  "DATE_RECEIVED_AT_SEQ_CENTER": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "DISEASE_CENTER_DESCR": "CUTANEOUS ONCOLOGY",
+  "FIRST_LAST": "",
+  "FIRST_NAME": "",
+  "GENDER": "Redacted",
+  "LAST_FIRST": "",
+  "LAST_NAME": "",
+  "MEAN_SAMPLE_COVERAGE": {
+    "$numberDouble": "123.0"
+  },
+  "METAMAIN_COUNT": {
+    "$numberDouble": "1234.0"
+  },
+  "MMR_STATUS": "Proficient (MMR-P / MSS)",
+  "MRN": "444444",
+  "ONCOTREE_BIOPSY_SITE": "LYMPH",
+  "ONCOTREE_BIOPSY_SITE_NAME": "Lymph",
+  "ONCOTREE_BIOPSY_SITE_TYPE": "Metastatic Recurrence",
+  "ONCOTREE_PRIMARY_DIAGNOSIS": "MCC",
+  "ONCOTREE_PRIMARY_DIAGNOSIS_META": "Skin Cancer, Non-Melanoma",
+  "ONCOTREE_PRIMARY_DIAGNOSIS_NAME": "Merkel Cell Carcinoma",
+  "ORD_PHYSICIAN_EMAIL": "Redacted",
+  "ORD_PHYSICIAN_NAME": "Redacted",
+  "ORD_PHYSICIAN_NPI": {
+    "$numberDouble": "12345.0"
+  },
+  "PANEL_VERSION": {
+    "$numberInt": "3"
+  },
+  "PATHOLOGIST_NAME": "Redacted",
+  "PCT_TARGET_BASE": {
+    "$numberDouble": "0.99"
+  },
+  "PDF_LAYOUT_VERSION": {
+    "$numberInt": "3"
+  },
+  "POWERPATH_PATIENT_ID": "Redacted",
+  "QC_RESULT": "PASS",
+  "QUESTION1_YN": "NA",
+  "QUESTION2_YN": "NA",
+  "QUESTION3_YN": "NA",
+  "QUESTION4_YN": "NA",
+  "QUESTION5_YN": "NA",
+  "REPORT_COMMENT": "An example comment added to a patient's sequencing report",
+  "REPORT_DATE": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "REPORT_VERSION": {
+    "$numberInt": "1"
+  },
+  "SAMPLE_ID": "FS-44-444444",
+  "SNV_RESULTS": "Has SNV Results",
+  "TEST_TYPE": "PROFILECOHORT",
+  "TOTAL_ALIGNED_READS": {
+    "$numberDouble": "1.2345678E+07"
+  },
+  "TOTAL_READS": {
+    "$numberDouble": "1.2345678E+07"
+  },
+  "TUMOR_MUTATIONAL_BURDEN_PER_MEGABASE": {
+    "$numberDouble": "2.0"
+  },
+  "TUMOR_PURITY_PERCENT": {
+    "$numberDouble": "0.5"
+  },
+  "VITAL_STATUS": "alive",
+  "BIRTH_DATE_INT": {
+    "$numberInt": "19000101"
+  },
+  "TEST_NAME": "oncopanel"
 }
 {
-	"_id": {
-		"$oid": "5dcb9176f2a9ea003196b5f9"
-	},
-	"_created": {
-		"$date": {
-			"$numberLong": "1573622134000"
-		}
-	},
-	"_etag": "0864af35f4de5d6c9bad3b8d7ab87c4269bb7b64",
-	"_updated": {
-		"$date": {
-			"$numberLong": "1573622134000"
-		}
-	},
-	"ALL_PROFILE_PERCENTILE": {
-		"$numberDouble": "0.0"
-	},
-	"ALT_MRN": "",
-	"BIRTH_DATE": {
-		"$date": {
-			"$numberLong": "-2208952800000"
-		}
-	},
-	"BLOCK_NUMBER": "Redacted",
-	"CANCER_TYPE_PERCENTILE": {
-		"$numberDouble": "0.0"
-	},
-	"CASE_COUNT": {
-		"$numberDouble": "12345.0"
-	},
-	"CNV_RESULTS": "Has CNV Results",
-	"CONSENT_17000": "Y",
-	"CRIS_YN": "Y",
-	"data_push_id": "2019-11-13 00:06:05",
-	"DATE_RECEIVED_AT_SEQ_CENTER": {
-		"$date": {
-			"$numberLong": "-2208952800000"
-		}
-	},
-	"FIRST_LAST": "",
-	"FIRST_NAME": "",
-	"GENDER": "Redacted",
-	"LAST_FIRST": "",
-	"LAST_NAME": "",
-	"MEAN_SAMPLE_COVERAGE": {
-		"$numberDouble": "123.0"
-	},
-	"METAMAIN_COUNT": {
-		"$numberDouble": "1234.0"
-	},
-	"MMR_STATUS": "Proficient (MMR-P / MSS)",
-	"MRN": "111111",
-	"ONCOTREE_BIOPSY_SITE": "BRAIN",
-	"ONCOTREE_BIOPSY_SITE_NAME": "CNS/Brain",
-	"ONCOTREE_BIOPSY_SITE_TYPE": "Primary",
-	"ONCOTREE_PRIMARY_DIAGNOSIS": "GB",
-	"ONCOTREE_PRIMARY_DIAGNOSIS_META": "Glioma",
-	"ONCOTREE_PRIMARY_DIAGNOSIS_NAME": "Glioblastoma",
-	"ORD_PHYSICIAN_EMAIL": "Redacted",
-	"ORD_PHYSICIAN_NAME": "Redacted",
-	"ORD_PHYSICIAN_NPI": {
-		"$numberDouble": "12345.0"
-	},
-	"PANEL_VERSION": {
-		"$numberInt": "3"
-	},
-	"PATHOLOGIST_NAME": "Redacted",
-	"PCT_TARGET_BASE": {
-		"$numberDouble": "0.99"
-	},
-	"PDF_LAYOUT_VERSION": {
-		"$numberInt": "3"
-	},
-	"POWERPATH_PATIENT_ID": "Redacted",
-	"QC_RESULT": "PASS",
-	"QUESTION1_YN": "Y",
-	"QUESTION2_YN": "Y",
-	"QUESTION3_YN": "Y",
-	"QUESTION4_YN": "Y",
-	"QUESTION5_YN": "Y",
-	"REPORT_COMMENT": "An example comment added to a patient's sequencing report",
-	"REPORT_DATE": {
-		"$date": {
-			"$numberLong": "-2208952800000"
-		}
-	},
-	"REPORT_VERSION": {
-		"$numberInt": "1"
-	},
-	"SAMPLE_ID": "FS-11-111111",
-	"SNV_RESULTS": "Has SNV Results",
-	"TEST_TYPE": "CLINICAL",
-	"TOTAL_ALIGNED_READS": {
-		"$numberDouble": "1.2345678E+07"
-	},
-	"TOTAL_READS": {
-		"$numberDouble": "1.2345678E+07"
-	},
-	"TUMOR_MUTATIONAL_BURDEN_PER_MEGABASE": {
-		"$numberDouble": "2.0"
-	},
-	"TUMOR_PURITY_PERCENT": {
-		"$numberDouble": "0.5"
-	},
-	"VITAL_STATUS": "alive",
-	"BIRTH_DATE_INT": {
-		"$numberInt": "19000101"
-	},
-	"TEST_NAME": "oncopanel"
+  "_id": {
+    "$oid": "5dca21b721730300312d4836"
+  },
+  "_created": {
+    "$date": {
+      "$numberLong": "1573527991000"
+    }
+  },
+  "_etag": "0abdf10928efc53ecabf7b7f40558357adefd7de",
+  "_updated": {
+    "$date": {
+      "$numberLong": "1573527991000"
+    }
+  },
+  "ALL_PROFILE_PERCENTILE": {
+    "$numberDouble": "0.0"
+  },
+  "ALT_MRN": "",
+  "BIRTH_DATE": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "BLOCK_NUMBER": "Redacted",
+  "CANCER_TYPE_PERCENTILE": {
+    "$numberDouble": "0.0"
+  },
+  "CASE_COUNT": {
+    "$numberDouble": "12345.0"
+  },
+  "CNV_RESULTS": "Has CNV Results",
+  "CONSENT_17000": "Y",
+  "CRIS_YN": "Y",
+  "data_push_id": "2019-11-11 22:01:03",
+  "DATE_RECEIVED_AT_SEQ_CENTER": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "DISEASE_CENTER_DESCR": "GYNECOLOGIC ONCOLOGY",
+  "FIRST_LAST": "",
+  "FIRST_NAME": "",
+  "GENDER": "Redacted",
+  "LAST_FIRST": "",
+  "LAST_NAME": "",
+  "MEAN_SAMPLE_COVERAGE": {
+    "$numberDouble": "123.0"
+  },
+  "METAMAIN_COUNT": {
+    "$numberDouble": "1234.0"
+  },
+  "MMR_STATUS": "Proficient (MMR-P / MSS)",
+  "MRN": "333333",
+  "ONCOTREE_BIOPSY_SITE": "UTERUS",
+  "ONCOTREE_BIOPSY_SITE_NAME": "Uterus",
+  "ONCOTREE_BIOPSY_SITE_TYPE": "Primary",
+  "ONCOTREE_PRIMARY_DIAGNOSIS": "UCS",
+  "ONCOTREE_PRIMARY_DIAGNOSIS_META": "Endometrial Cancer",
+  "ONCOTREE_PRIMARY_DIAGNOSIS_NAME": "Uterine Carcinosarcoma/Uterine Malignant Mixed Mullerian Tumor",
+  "ORD_PHYSICIAN_EMAIL": "Redacted",
+  "ORD_PHYSICIAN_NAME": "Redacted",
+  "ORD_PHYSICIAN_NPI": {
+    "$numberDouble": "12345.0"
+  },
+  "PANEL_VERSION": {
+    "$numberInt": "3"
+  },
+  "PATHOLOGIST_NAME": "Redacted",
+  "PCT_TARGET_BASE": {
+    "$numberDouble": "0.99"
+  },
+  "PDF_LAYOUT_VERSION": {
+    "$numberInt": "3"
+  },
+  "POWERPATH_PATIENT_ID": "Redacted",
+  "QC_RESULT": "PASS",
+  "QUESTION1_YN": "NA",
+  "QUESTION2_YN": "NA",
+  "QUESTION3_YN": "NA",
+  "QUESTION4_YN": "NA",
+  "QUESTION5_YN": "NA",
+  "REPORT_COMMENT": "An example comment added to a patient's sequencing report",
+  "REPORT_DATE": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "REPORT_VERSION": {
+    "$numberInt": "1"
+  },
+  "SAMPLE_ID": "FS-33-333333",
+  "SNV_RESULTS": "Has SNV Results",
+  "TEST_TYPE": "PROFILECOHORT",
+  "TOTAL_ALIGNED_READS": {
+    "$numberDouble": "1.2345678E+07"
+  },
+  "TOTAL_READS": {
+    "$numberDouble": "1.2345678E+07"
+  },
+  "TUMOR_MUTATIONAL_BURDEN_PER_MEGABASE": {
+    "$numberDouble": "2.0"
+  },
+  "TUMOR_PURITY_PERCENT": {
+    "$numberDouble": "0.5"
+  },
+  "VITAL_STATUS": "alive",
+  "BIRTH_DATE_INT": {
+    "$numberInt": "19000101"
+  },
+  "TEST_NAME": "oncopanel"
 }
 {
-	"_id": {
-		"$oid": "5dcb90fdf2a9ea002ecc7afe"
-	},
-	"_created": {
-		"$date": {
-			"$numberLong": "1573622013000"
-		}
-	},
-	"_etag": "f9b48e441d6d67abd71aae3365880c0ea3b30686",
-	"_updated": {
-		"$date": {
-			"$numberLong": "1573622013000"
-		}
-	},
-	"ALL_PROFILE_PERCENTILE": {
-		"$numberDouble": "0.0"
-	},
-	"ALT_MRN": "",
-	"BIRTH_DATE": {
-		"$date": {
-			"$numberLong": "-2208952800000"
-		}
-	},
-	"BLOCK_NUMBER": "Redacted",
-	"CANCER_TYPE_PERCENTILE": {
-		"$numberDouble": "0.0"
-	},
-	"CASE_COUNT": {
-		"$numberDouble": "12345.0"
-	},
-	"CNV_RESULTS": "Has CNV Results",
-	"CONSENT_17000": "Y",
-	"CRIS_YN": "Y",
-	"data_push_id": "2019-11-13 00:06:05",
-	"DATE_RECEIVED_AT_SEQ_CENTER": {
-		"$date": {
-			"$numberLong": "-2208952800000"
-		}
-	},
-	"DISEASE_CENTER_DESCR": "GYNECOLOGIC ONCOLOGY",
-	"FIRST_LAST": "",
-	"FIRST_NAME": "",
-	"GENDER": "Redacted",
-	"LAST_FIRST": "",
-	"LAST_NAME": "",
-	"MEAN_SAMPLE_COVERAGE": {
-		"$numberDouble": "123.0"
-	},
-	"METAMAIN_COUNT": {
-		"$numberDouble": "1234.0"
-	},
-	"MMR_STATUS": "Proficient (MMR-P / MSS)",
-	"MRN": "222222",
-	"ONCOTREE_BIOPSY_SITE": "UTERUS",
-	"ONCOTREE_BIOPSY_SITE_NAME": "Uterus",
-	"ONCOTREE_BIOPSY_SITE_TYPE": "Primary",
-	"ONCOTREE_PRIMARY_DIAGNOSIS": "USC",
-	"ONCOTREE_PRIMARY_DIAGNOSIS_META": "Endometrial Cancer",
-	"ONCOTREE_PRIMARY_DIAGNOSIS_NAME": "Uterine Serous Carcinoma/Uterine Papillary Serous Carcinoma",
-	"ORD_PHYSICIAN_NAME": "Redacted",
-	"ORD_PHYSICIAN_NPI": {
-		"$numberDouble": "12345.0"
-	},
-	"PANEL_VERSION": {
-		"$numberInt": "3"
-	},
-	"PATHOLOGIST_NAME": "Redacted",
-	"PCT_TARGET_BASE": {
-		"$numberDouble": "0.99"
-	},
-	"PDF_LAYOUT_VERSION": {
-		"$numberInt": "3"
-	},
-	"POWERPATH_PATIENT_ID": "Redacted",
-	"QC_RESULT": "PASS",
-	"QUESTION1_YN": "NA",
-	"QUESTION2_YN": "NA",
-	"QUESTION3_YN": "NA",
-	"QUESTION4_YN": "NA",
-	"QUESTION5_YN": "NA",
-	"REPORT_COMMENT": "An example comment added to a patient's sequencing report",
-	"REPORT_DATE": {
-		"$date": {
-			"$numberLong": "-2208952800000"
-		}
-	},
-	"REPORT_VERSION": {
-		"$numberInt": "1"
-	},
-	"SAMPLE_ID": "FS-22-222222",
-	"SNV_RESULTS": "Has SNV Results",
-	"TEST_TYPE": "PROFILECOHORT",
-	"TOTAL_ALIGNED_READS": {
-		"$numberDouble": "1.2345678E+07"
-	},
-	"TOTAL_READS": {
-		"$numberDouble": "1.2345678E+07"
-	},
-	"TUMOR_MUTATIONAL_BURDEN_PER_MEGABASE": {
-		"$numberDouble": "2.0"
-	},
-	"TUMOR_PURITY_PERCENT": {
-		"$numberDouble": "0.5"
-	},
-	"VITAL_STATUS": "alive",
-	"ORD_PHYSICIAN_EMAIL": "Redacted",
-	"BIRTH_DATE_INT": {
-		"$numberInt": "19000101"
-	},
-	"TEST_NAME": "oncopanel"
+  "_id": {
+    "$oid": "5dcb90fdf2a9ea002ecc7afe"
+  },
+  "_created": {
+    "$date": {
+      "$numberLong": "1573622013000"
+    }
+  },
+  "_etag": "f9b48e441d6d67abd71aae3365880c0ea3b30686",
+  "_updated": {
+    "$date": {
+      "$numberLong": "1573622013000"
+    }
+  },
+  "ALL_PROFILE_PERCENTILE": {
+    "$numberDouble": "0.0"
+  },
+  "ALT_MRN": "",
+  "BIRTH_DATE": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "BLOCK_NUMBER": "Redacted",
+  "CANCER_TYPE_PERCENTILE": {
+    "$numberDouble": "0.0"
+  },
+  "CASE_COUNT": {
+    "$numberDouble": "12345.0"
+  },
+  "CNV_RESULTS": "Has CNV Results",
+  "CONSENT_17000": "Y",
+  "CRIS_YN": "Y",
+  "data_push_id": "2019-11-13 00:06:05",
+  "DATE_RECEIVED_AT_SEQ_CENTER": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "DISEASE_CENTER_DESCR": "GYNECOLOGIC ONCOLOGY",
+  "FIRST_LAST": "",
+  "FIRST_NAME": "",
+  "GENDER": "Redacted",
+  "LAST_FIRST": "",
+  "LAST_NAME": "",
+  "MEAN_SAMPLE_COVERAGE": {
+    "$numberDouble": "123.0"
+  },
+  "METAMAIN_COUNT": {
+    "$numberDouble": "1234.0"
+  },
+  "MMR_STATUS": "Proficient (MMR-P / MSS)",
+  "MRN": "222222",
+  "ONCOTREE_BIOPSY_SITE": "UTERUS",
+  "ONCOTREE_BIOPSY_SITE_NAME": "Uterus",
+  "ONCOTREE_BIOPSY_SITE_TYPE": "Primary",
+  "ONCOTREE_PRIMARY_DIAGNOSIS": "USC",
+  "ONCOTREE_PRIMARY_DIAGNOSIS_META": "Endometrial Cancer",
+  "ONCOTREE_PRIMARY_DIAGNOSIS_NAME": "Uterine Serous Carcinoma/Uterine Papillary Serous Carcinoma",
+  "ORD_PHYSICIAN_NAME": "Redacted",
+  "ORD_PHYSICIAN_NPI": {
+    "$numberDouble": "12345.0"
+  },
+  "PANEL_VERSION": {
+    "$numberInt": "3"
+  },
+  "PATHOLOGIST_NAME": "Redacted",
+  "PCT_TARGET_BASE": {
+    "$numberDouble": "0.99"
+  },
+  "PDF_LAYOUT_VERSION": {
+    "$numberInt": "3"
+  },
+  "POWERPATH_PATIENT_ID": "Redacted",
+  "QC_RESULT": "PASS",
+  "QUESTION1_YN": "NA",
+  "QUESTION2_YN": "NA",
+  "QUESTION3_YN": "NA",
+  "QUESTION4_YN": "NA",
+  "QUESTION5_YN": "NA",
+  "REPORT_COMMENT": "An example comment added to a patient's sequencing report",
+  "REPORT_DATE": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "REPORT_VERSION": {
+    "$numberInt": "1"
+  },
+  "SAMPLE_ID": "FS-22-222222",
+  "SNV_RESULTS": "Has SNV Results",
+  "TEST_TYPE": "PROFILECOHORT",
+  "TOTAL_ALIGNED_READS": {
+    "$numberDouble": "1.2345678E+07"
+  },
+  "TOTAL_READS": {
+    "$numberDouble": "1.2345678E+07"
+  },
+  "TUMOR_MUTATIONAL_BURDEN_PER_MEGABASE": {
+    "$numberDouble": "2.0"
+  },
+  "TUMOR_PURITY_PERCENT": {
+    "$numberDouble": "0.5"
+  },
+  "VITAL_STATUS": "alive",
+  "ORD_PHYSICIAN_EMAIL": "Redacted",
+  "BIRTH_DATE_INT": {
+    "$numberInt": "19000101"
+  },
+  "TEST_NAME": "oncopanel"
 }
 {
-	"_id": {
-		"$oid": "5dbe524ab46b750032c82a20"
-	},
-	"_created": {
-		"$date": {
-			"$numberLong": "1572753994000"
-		}
-	},
-	"_etag": "166d3a173ce016e2111d1a03b6b91b49026fc0ef",
-	"_updated": {
-		"$date": {
-			"$numberLong": "1572753994000"
-		}
-	},
-	"ALL_PROFILE_PERCENTILE": {
-		"$numberDouble": "0.0"
-	},
-	"ALT_MRN": "",
-	"BIRTH_DATE": {
-		"$date": {
-			"$numberLong": "-2208952800000"
-		}
-	},
-	"BLOCK_NUMBER": "Redacted",
-	"CANCER_TYPE_PERCENTILE": {
-		"$numberDouble": "0.0"
-	},
-	"CASE_COUNT": {
-		"$numberDouble": "12345.0"
-	},
-	"CNV_RESULTS": "Has CNV Results",
-	"CONSENT_17000": "Y",
-	"CRIS_YN": "Y",
-	"data_push_id": "2019-11-03 00:01:14",
-	"DATE_RECEIVED_AT_SEQ_CENTER": {
-		"$date": {
-			"$numberLong": "-2208952800000"
-		}
-	},
-	"FIRST_LAST": "",
-	"FIRST_NAME": "",
-	"GENDER": "Redacted",
-	"LAST_FIRST": "",
-	"LAST_NAME": "",
-	"MEAN_SAMPLE_COVERAGE": {
-		"$numberDouble": "123.0"
-	},
-	"METAMAIN_COUNT": {
-		"$numberDouble": "1234.0"
-	},
-	"MMR_STATUS": "Proficient (MMR-P / MSS)",
-	"MRN": "555555",
-	"ONCOTREE_BIOPSY_SITE": "BOWEL",
-	"ONCOTREE_BIOPSY_SITE_NAME": "Bowel",
-	"ONCOTREE_BIOPSY_SITE_TYPE": "Primary",
-	"ONCOTREE_PRIMARY_DIAGNOSIS": "COAD",
-	"ONCOTREE_PRIMARY_DIAGNOSIS_META": "Colorectal Cancer",
-	"ONCOTREE_PRIMARY_DIAGNOSIS_NAME": "Colon Adenocarcinoma",
-	"ORD_PHYSICIAN_NAME": "Redacted",
-	"ORD_PHYSICIAN_NPI": {
-		"$numberDouble": "12345.0"
-	},
-	"PANEL_VERSION": {
-		"$numberInt": "3"
-	},
-	"PATHOLOGIST_NAME": "Redacted",
-	"PCT_TARGET_BASE": {
-		"$numberDouble": "0.99"
-	},
-	"PDF_LAYOUT_VERSION": {
-		"$numberInt": "3"
-	},
-	"POWERPATH_PATIENT_ID": "Redacted",
-	"QC_RESULT": "PASS",
-	"QUESTION1_YN": "Y",
-	"QUESTION2_YN": "Y",
-	"QUESTION3_YN": "Y",
-	"QUESTION4_YN": "Y",
-	"QUESTION5_YN": "Y",
-	"REPORT_COMMENT": "An example comment added to a patient's sequencing report",
-	"REPORT_DATE": {
-		"$date": {
-			"$numberLong": "-2208952800000"
-		}
-	},
-	"REPORT_VERSION": {
-		"$numberInt": "1"
-	},
-	"SAMPLE_ID": "FS-55-555555",
-	"SNV_RESULTS": "Has SNV Results",
-	"TEST_TYPE": "CLINICAL",
-	"TOTAL_ALIGNED_READS": {
-		"$numberDouble": "1.2345678E+07"
-	},
-	"TOTAL_READS": {
-		"$numberDouble": "1.2345678E+07"
-	},
-	"TUMOR_MUTATIONAL_BURDEN_PER_MEGABASE": {
-		"$numberDouble": "2.0"
-	},
-	"TUMOR_PURITY_PERCENT": {
-		"$numberDouble": "0.5"
-	},
-	"VITAL_STATUS": "alive",
-	"ORD_PHYSICIAN_EMAIL": "Redacted",
-	"BIRTH_DATE_INT": {
-		"$numberInt": "19000101"
-	},
-	"TEST_NAME": "oncopanel"
+  "_id": {
+    "$oid": "5dcb9176f2a9ea003196b5f9"
+  },
+  "_created": {
+    "$date": {
+      "$numberLong": "1573622134000"
+    }
+  },
+  "_etag": "0864af35f4de5d6c9bad3b8d7ab87c4269bb7b64",
+  "_updated": {
+    "$date": {
+      "$numberLong": "1573622134000"
+    }
+  },
+  "ALL_PROFILE_PERCENTILE": {
+    "$numberDouble": "0.0"
+  },
+  "ALT_MRN": "",
+  "BIRTH_DATE": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "BLOCK_NUMBER": "Redacted",
+  "CANCER_TYPE_PERCENTILE": {
+    "$numberDouble": "0.0"
+  },
+  "CASE_COUNT": {
+    "$numberDouble": "12345.0"
+  },
+  "CNV_RESULTS": "Has CNV Results",
+  "CONSENT_17000": "Y",
+  "CRIS_YN": "Y",
+  "data_push_id": "2019-11-13 00:06:05",
+  "DATE_RECEIVED_AT_SEQ_CENTER": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "FIRST_LAST": "",
+  "FIRST_NAME": "",
+  "GENDER": "Redacted",
+  "LAST_FIRST": "",
+  "LAST_NAME": "",
+  "MEAN_SAMPLE_COVERAGE": {
+    "$numberDouble": "123.0"
+  },
+  "METAMAIN_COUNT": {
+    "$numberDouble": "1234.0"
+  },
+  "MMR_STATUS": "Proficient (MMR-P / MSS)",
+  "MRN": "111111",
+  "ONCOTREE_BIOPSY_SITE": "BRAIN",
+  "ONCOTREE_BIOPSY_SITE_NAME": "CNS/Brain",
+  "ONCOTREE_BIOPSY_SITE_TYPE": "Primary",
+  "ONCOTREE_PRIMARY_DIAGNOSIS": "GB",
+  "ONCOTREE_PRIMARY_DIAGNOSIS_META": "Glioma",
+  "ONCOTREE_PRIMARY_DIAGNOSIS_NAME": "Glioblastoma",
+  "ORD_PHYSICIAN_EMAIL": "Redacted",
+  "ORD_PHYSICIAN_NAME": "Redacted",
+  "ORD_PHYSICIAN_NPI": {
+    "$numberDouble": "12345.0"
+  },
+  "PANEL_VERSION": {
+    "$numberInt": "3"
+  },
+  "PATHOLOGIST_NAME": "Redacted",
+  "PCT_TARGET_BASE": {
+    "$numberDouble": "0.99"
+  },
+  "PDF_LAYOUT_VERSION": {
+    "$numberInt": "3"
+  },
+  "POWERPATH_PATIENT_ID": "Redacted",
+  "QC_RESULT": "PASS",
+  "QUESTION1_YN": "Y",
+  "QUESTION2_YN": "Y",
+  "QUESTION3_YN": "Y",
+  "QUESTION4_YN": "Y",
+  "QUESTION5_YN": "Y",
+  "REPORT_COMMENT": "An example comment added to a patient's sequencing report",
+  "REPORT_DATE": {
+    "$date": {
+      "$numberLong": "-2208952800000"
+    }
+  },
+  "REPORT_VERSION": {
+    "$numberInt": "1"
+  },
+  "SAMPLE_ID": "FS-11-111111",
+  "SNV_RESULTS": "Has SNV Results",
+  "TEST_TYPE": "CLINICAL",
+  "TOTAL_ALIGNED_READS": {
+    "$numberDouble": "1.2345678E+07"
+  },
+  "TOTAL_READS": {
+    "$numberDouble": "1.2345678E+07"
+  },
+  "TUMOR_MUTATIONAL_BURDEN_PER_MEGABASE": {
+    "$numberDouble": "2.0"
+  },
+  "TUMOR_PURITY_PERCENT": {
+    "$numberDouble": "0.5"
+  },
+  "VITAL_STATUS": "alive",
+  "BIRTH_DATE_INT": {
+    "$numberInt": "19000101"
+  },
+  "TEST_NAME": "oncopanel"
 }
