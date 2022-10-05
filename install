@@ -140,4 +140,18 @@ echo "Resetting elasticsearch..."
 curl --netrc-file ./netrc --fail --location --silent --show-error --output /dev/null -X POST http://localhost/api/reset_elasticsearch
 
 # Notify user:
-echo "Success! MatchMiner is now available at: http://localhost"
+echo "MatchMiner started successfully!"
+echo "The UI is now available at: http://localhost"
+echo "To manage services, enter the directory '$(pwd)' and run docker-compose."
+if which xdg-open >/dev/null 2>/dev/null
+then
+  echo "Opening browser..."
+  xdg-open http://localhost
+elif test "$(uname -s)" = "Darwin"
+then
+  echo "Opening browser..."
+  open http://localhost
+fi
+
+# Setup complete!
+popd >/dev/null
