@@ -85,35 +85,20 @@ docker-compose start
 # Wait for MongoDB to start:
 echo 'Waiting for MongoDB to start...'
 START_WAIT="$SECONDS"
-while ! docker-compose exec mongo mongo --eval ";" >/dev/null 2>/dev/null
+# Note: MongoDB will bind to localhost immediately, but it won't bind to 'mongo' until setup is done
+while ! docker-compose exec mongo mongosh --quiet --eval ";" mongodb://mongo:27017 >/dev/null 2>/dev/null
 do
   sleep 1
-  if test "$((SECONDS - START_WAIT))" -ge 15
+  if test "$((SECONDS - START_WAIT))" -ge 30
   then
     echo "MongoDB failed to start; check docker-compose logs to debug"
     exit 1
   fi
 done
 
-# Set up MongoDB replica set:
-echo 'Initializing mongodb as replica set...'
-docker-compose exec mongo mongo matchminer --quiet --eval "rs.initiate();" >/dev/null
-
-# Load demo data into MongoDB:
-echo "Loading demo data into mongo..."
-rm -rf ./matchminer
-tar -xzf matchminer.tar.gz
-docker-compose cp matchminer mongo:/
-rm -rf ./matchminer
-docker-compose exec mongo mongorestore --quiet matchminer
-
-# Setup complete!
-popd >/dev/null
-
-# Helper to wait for a URL to become available:
-wait_for_url() {
-  curl --fail --location --max-time 1 --retry 15 --retry-delay 1 --retry-connrefused "$1" >/dev/null 2>/dev/null;
-}
+# Restart matchminer-api after MongoDB up
+echo "Restarting MatchMiner API now that mongo is available..."
+docker-compose restart matchminer-api
 
 # Wait for MatchMiner to be ready:
 echo "Waiting for MatchMiner UI to become ready..."
