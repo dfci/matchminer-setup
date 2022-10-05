@@ -1,0 +1,58 @@
+{
+	"_id": {
+		"$oid": "633c4b84bfa289042a96230e"
+	},
+	"first_name": "SERVICE",
+	"last_name": "SERVICE",
+	"title": "",
+	"email": "service_account@example.com",
+	"token": "MgvwBIzOoaEwYLNCuGJB",
+	"user_name": "SERVICE",
+	"teams": [],
+	"roles": [
+		"service"
+	],
+	"last_auth": {
+		"$date": {
+			"$numberLong": "1664895894504"
+		}
+	}
+}
+{
+	"_id": {
+		"$oid": "577cf6ef2b9920002cef0337"
+	},
+	"last_name": "Doe",
+	"teams": [
+		{
+			"$oid": "4b8ede8f4e0cce002dd5913a"
+		}
+	],
+	"_updated": {
+		"$date": {
+			"$numberLong": "1519312527000"
+		}
+	},
+	"first_name": "John",
+	"roles": [
+		"user",
+		"cti",
+		"oncologist",
+		"admin"
+	],
+	"title": "",
+	"email": "fake_email@dfci.harvard.edu",
+	"_created": {
+		"$date": {
+			"$numberLong": "1519312527000"
+		}
+	},
+	"user_name": "du123",
+	"token": "fb4d6830-d3aa-481b-bcd6-270d69790e11",
+	"oncore_token": "5f3c2421-271c-41ba-ac14-899f214d49b9",
+	"last_auth": {
+		"$date": {
+			"$numberLong": "1664895896082"
+		}
+	}
+}

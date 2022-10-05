@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+# This script saves your local MongoDB database to "./mongo-seed"
+# in the special format restored by "mongo-init." In that format,
+# the metadata for each collection is stored in "collection_name.metadata.json",
+# and the items in the collectiona are stored "collection_name.items.json".
+
+# This is kind of a hack; it is not intended for regular use.
+
+COLLECTIONS="$(docker-compose exec mongo mongosh --quiet --eval 'db.getCollectionNames().join(" ")' matchminer)"
+rm -rf ./exported dump.tar ./dump ./tmp ./exported ./mongo-seed
+mkdir -p ./exported
+docker-compose exec mongo rm -rf /tmp/exp
+docker-compose exec mongo mkdir -p /tmp/exp
+docker-compose exec mongo mongodump --out=/tmp/exp/dump mongodb://localhost/matchminer
+docker-compose exec mongo tar cf /dev/stdout -C /tmp/exp/dump/matchminer . > ./dump.tar
+rm -rf ./dump
+mkdir -p ./dump
+tar xvf ./dump.tar -C ./dump
+for FILE in ./dump/*
+do
+  case "$FILE" in
+    *.metadata.json)
+      jq . "$FILE" > ./exported/$(basename $FILE)
+      ;;
+    *.bson)
+      BASENAME="$(basename $FILE)"
+      bsondump --pretty --bsonFile="$FILE" | jq -s 'sort_by(._id["$oid"]) | .[]' > ./exported/${BASENAME%.bson}.items.json
+      ;;
+  esac
+done
+mv ./exported ./mongo-seed
+rm -rf ./exported dump.tar ./dump

@@ -1,0 +1,40 @@
+{
+	"_id": {
+		"$oid": "633c4b964a0ac739d2e8c781"
+	},
+	"active_filter_data_set": [],
+	"active_user_data_set": [
+		[
+			"SERVICE SERVICE",
+			"servi",
+			"2022-10-04 15:04"
+		]
+	],
+	"inactive_user_data_set": [
+		[
+			"John Doe",
+			"oncologist, cti, admin",
+			null
+		]
+	],
+	"mm_data_set": [
+		[
+			"2022-09-29",
+			{
+				"$numberInt": "5"
+			},
+			{
+				"$numberInt": "5"
+			},
+			{
+				"$numberInt": "5"
+			},
+			{
+				"$numberInt": "1"
+			},
+			{
+				"$numberInt": "0"
+			}
+		]
+	]
+}
