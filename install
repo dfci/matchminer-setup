@@ -1,39 +1,67 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# generate [N] generates a random alphabetical string of length N (defaults to 20).
+generate() {
+  LC_ALL=C tr -dc 'a-zA-Z' < /dev/urandom | head -c"${1:-20}" || test $? -eq 141 ;
+  echo "";
+}
+
+# die [LINES...] exits with an error message
+die() {
+  echo "Failed to start MatchMiner:"
+  for LINE in "$@"
+  do
+      echo "$LINE"
+  done
+  exit 1
+}
+
+# wait_for_url [URL] waits for URL to become available
+wait_for_url() {
+  curl --fail \
+    --location \
+    --max-time 1 \
+    --retry 30 \
+    --retry-delay 1 \
+    --retry-connrefused \
+    --silent \
+    --show-error \
+    --output /dev/null \
+    "$1"
+}
+
 # Ensure that docker is installed:
 if ! which docker >/dev/null
 then
-  echo 'this script requires docker'
-  exit 1
+  die 'docker is not installed'
 fi
 
 # Ensure that docker-compose is installed:
 if ! which docker-compose >/dev/null
 then
-  echo 'this script requires docker-compose'
-  exit 1
+  die 'docker-compose is not installed'
 fi
 
 # Ensure that we can connect to Docker:
 ERRS="$(docker info --format '{{range .ServerErrors}}{{.}}{{end}}' 2>&1)"
 if ! test -z "$ERRS"
 then
-  echo 'cannot connect to docker:'
-  echo "$ERRS"
-  exit 1
+  die 'cannot connect to docker:' "$ERRS"
 fi
+
+# Disable annoying Docker message:
+export DOCKER_SCAN_SUGGEST=false
 
 # Start setup; cd into the path of this script:
 if test -z "${BASH_SOURCE[0]:-}"
 then
-  echo 'failed to find script path'
-  exit 1
+  die 'failed to find script path'
 fi
 pushd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null
 
 # Take down any existing services:
-echo 'Taking down any existing services...'
+echo 'Taking down MatchMiner if it is already running...'
 docker-compose down --remove-orphans --volumes --timeout 5 --rmi local
 
 # Ensure that port 80 is not in use (macOS only):
@@ -41,8 +69,7 @@ if test "$(uname -s)" = "Darwin" && which lsof >/dev/null 2>/dev/null
 then
   if lsof -iTCP:80 -sTCP:LISTEN >/dev/null 2>/dev/null
   then
-    echo 'Cannot start: port 80 is already in use'
-    exit 1
+    die 'Cannot start: port 80 is already in use'
   fi
 fi
 
@@ -92,20 +119,18 @@ wait_for_url() {
 echo "Waiting for MatchMiner UI to become ready..."
 if ! wait_for_url http://localhost
 then
-  echo "Startup failed! Check docker-compose logs to debug..."
-  exit 1
+  die "Startup failed! Check docker-compose logs to debug..."
 fi
 echo "Waiting for MatchMiner API to become ready..."
 if ! wait_for_url http://localhost/api/info
 then
-  echo "Startup failed! Check docker-compose logs to debug..."
-  exit 1
+  die "Startup failed! Check docker-compose logs to debug..."
 fi
+
 echo "Waiting for MatchMiner ElasticSearch to become ready..."
-if ! wait_for_url http://localhost/elasticsearch
+if ! wait_for_url http://localhost/api/es/_nodes/_local
 then
-  echo "Startup failed! Check docker-compose logs to debug..."
-  exit 1
+  die "Startup failed! Check docker-compose logs to debug..."
 fi
 
 # Notify user:
