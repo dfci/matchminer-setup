@@ -53,6 +53,17 @@ fi
 # Disable annoying Docker message:
 export DOCKER_SCAN_SUGGEST=false
 
+# MATCHMINER_BUILD_PATH, if set, will cause us to rebuild the Docker images
+# from repositories in the specified path:
+if test -n "${MATCHMINER_BUILD_PATH:-}"
+then
+  pushd "$MATCHMINER_BUILD_PATH" >/dev/null
+  MATCHMINER_BUILD_PATH="$(pwd)"
+  popd > /dev/null
+else
+  MATCHMINER_BUILD_PATH=""
+fi
+
 # Start setup; cd into the path of this script:
 if test -z "${BASH_SOURCE[0]:-}"
 then
@@ -77,6 +88,13 @@ fi
 # (This is basically the same as docker-compose up)
 echo 'Pulling latest versions of images...'
 docker-compose pull
+if test -n "$MATCHMINER_BUILD_PATH"
+then
+  echo "Performing build from ${MATCHMINER_BUILD_PATH}..."
+  MATCHMINER_BUILD_PATH="$MATCHMINER_BUILD_PATH" docker-compose build
+else
+  echo "Not rebuilding images..."
+fi
 echo 'Creating containers...'
 docker-compose create --pull never --no-build
 echo 'Starting containers...'
