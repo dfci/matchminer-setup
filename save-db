@@ -21,7 +21,7 @@ for FILE in ./dump/*
 do
   case "$FILE" in
     *.metadata.json)
-      jq . "$FILE" > ./exported/$(basename $FILE)
+      jq '.indexes |= sort_by(.name)' "$FILE" > ./exported/$(basename $FILE)
       ;;
     *.bson)
       BASENAME="$(basename $FILE)"
