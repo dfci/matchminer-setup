@@ -17,10 +17,10 @@ do
 done
 
 echo 'Restoring metadata from mongo-seed...'
-rm -rf $HOME/mongo-seed-meta
-mkdir -p $HOME/mongo-seed-meta
-cp /mongo-seed/*.metadata.json $HOME/mongo-seed-meta/
-mongorestore --dir=$HOME/mongo-seed-meta mongodb://localhost/matchminer
+rm -rf /tmp/mongo-seed-meta
+mkdir -p /tmp/mongo-seed-meta
+cp /mongo-seed/*.metadata.json /tmp/mongo-seed-meta/
+mongorestore --dir=/tmp/mongo-seed-meta mongodb://localhost/matchminer
 
 echo 'Restoring collection data from mongo-seed...'
 for FILE in /mongo-seed/*.items.json
