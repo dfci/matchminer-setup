@@ -1,0 +1,572 @@
+{
+  "_id": {
+    "$oid": "633df6593f8f663a7594114a"
+  },
+  "protocol_no": "17-032",
+  "clinical_ids": {
+    "all": null
+  },
+  "run_id": "60dd20cdff51490099e12f4413d4276a",
+  "run_params": {
+    "trial": null,
+    "sample_ids": null,
+    "match_on_deceased": false,
+    "match_on_closed": true,
+    "report_clinical_reasons": false,
+    "workers": {
+      "$numberInt": "20"
+    },
+    "ignore_run_log": false
+  },
+  "_created": {
+    "$date": {
+      "$numberLong": "1665005142820"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a75941150"
+  },
+  "protocol_no": "13-615",
+  "clinical_ids": {
+    "all": null
+  },
+  "run_id": "60dd20cdff51490099e12f4413d4276a",
+  "run_params": {
+    "trial": null,
+    "sample_ids": null,
+    "match_on_deceased": false,
+    "match_on_closed": true,
+    "report_clinical_reasons": false,
+    "workers": {
+      "$numberInt": "20"
+    },
+    "ignore_run_log": false
+  },
+  "_created": {
+    "$date": {
+      "$numberLong": "1665005142820"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a75941153"
+  },
+  "protocol_no": "16-443",
+  "clinical_ids": {
+    "all": null
+  },
+  "run_id": "60dd20cdff51490099e12f4413d4276a",
+  "run_params": {
+    "trial": null,
+    "sample_ids": null,
+    "match_on_deceased": false,
+    "match_on_closed": true,
+    "report_clinical_reasons": false,
+    "workers": {
+      "$numberInt": "20"
+    },
+    "ignore_run_log": false
+  },
+  "_created": {
+    "$date": {
+      "$numberLong": "1665005142820"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a75941158"
+  },
+  "protocol_no": "11-010",
+  "clinical_ids": {
+    "all": null
+  },
+  "run_id": "60dd20cdff51490099e12f4413d4276a",
+  "run_params": {
+    "trial": null,
+    "sample_ids": null,
+    "match_on_deceased": false,
+    "match_on_closed": true,
+    "report_clinical_reasons": false,
+    "workers": {
+      "$numberInt": "20"
+    },
+    "ignore_run_log": false
+  },
+  "_created": {
+    "$date": {
+      "$numberLong": "1665005142820"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a75941159"
+  },
+  "protocol_no": "12-085",
+  "clinical_ids": {
+    "all": null
+  },
+  "run_id": "60dd20cdff51490099e12f4413d4276a",
+  "run_params": {
+    "trial": null,
+    "sample_ids": null,
+    "match_on_deceased": false,
+    "match_on_closed": true,
+    "report_clinical_reasons": false,
+    "workers": {
+      "$numberInt": "20"
+    },
+    "ignore_run_log": false
+  },
+  "_created": {
+    "$date": {
+      "$numberLong": "1665005142820"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a7594115a"
+  },
+  "protocol_no": "16-456",
+  "clinical_ids": {
+    "all": null
+  },
+  "run_id": "60dd20cdff51490099e12f4413d4276a",
+  "run_params": {
+    "trial": null,
+    "sample_ids": null,
+    "match_on_deceased": false,
+    "match_on_closed": true,
+    "report_clinical_reasons": false,
+    "workers": {
+      "$numberInt": "20"
+    },
+    "ignore_run_log": false
+  },
+  "_created": {
+    "$date": {
+      "$numberLong": "1665005142820"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a7594115b"
+  },
+  "protocol_no": "16-314",
+  "clinical_ids": {
+    "all": null
+  },
+  "run_id": "60dd20cdff51490099e12f4413d4276a",
+  "run_params": {
+    "trial": null,
+    "sample_ids": null,
+    "match_on_deceased": false,
+    "match_on_closed": true,
+    "report_clinical_reasons": false,
+    "workers": {
+      "$numberInt": "20"
+    },
+    "ignore_run_log": false
+  },
+  "_created": {
+    "$date": {
+      "$numberLong": "1665005142820"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a7594115c"
+  },
+  "protocol_no": "17-016",
+  "clinical_ids": {
+    "all": null
+  },
+  "run_id": "60dd20cdff51490099e12f4413d4276a",
+  "run_params": {
+    "trial": null,
+    "sample_ids": null,
+    "match_on_deceased": false,
+    "match_on_closed": true,
+    "report_clinical_reasons": false,
+    "workers": {
+      "$numberInt": "20"
+    },
+    "ignore_run_log": false
+  },
+  "_created": {
+    "$date": {
+      "$numberLong": "1665005142820"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a7594115d"
+  },
+  "protocol_no": "16-265",
+  "clinical_ids": {
+    "all": null
+  },
+  "run_id": "60dd20cdff51490099e12f4413d4276a",
+  "run_params": {
+    "trial": null,
+    "sample_ids": null,
+    "match_on_deceased": false,
+    "match_on_closed": true,
+    "report_clinical_reasons": false,
+    "workers": {
+      "$numberInt": "20"
+    },
+    "ignore_run_log": false
+  },
+  "_created": {
+    "$date": {
+      "$numberLong": "1665005142820"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a7594115e"
+  },
+  "protocol_no": "16-383",
+  "clinical_ids": {
+    "all": null
+  },
+  "run_id": "60dd20cdff51490099e12f4413d4276a",
+  "run_params": {
+    "trial": null,
+    "sample_ids": null,
+    "match_on_deceased": false,
+    "match_on_closed": true,
+    "report_clinical_reasons": false,
+    "workers": {
+      "$numberInt": "20"
+    },
+    "ignore_run_log": false
+  },
+  "_created": {
+    "$date": {
+      "$numberLong": "1665005142820"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a7594115f"
+  },
+  "protocol_no": "16-254",
+  "clinical_ids": {
+    "all": null
+  },
+  "run_id": "60dd20cdff51490099e12f4413d4276a",
+  "run_params": {
+    "trial": null,
+    "sample_ids": null,
+    "match_on_deceased": false,
+    "match_on_closed": true,
+    "report_clinical_reasons": false,
+    "workers": {
+      "$numberInt": "20"
+    },
+    "ignore_run_log": false
+  },
+  "_created": {
+    "$date": {
+      "$numberLong": "1665005142820"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a75941160"
+  },
+  "protocol_no": "16-281",
+  "clinical_ids": {
+    "all": null
+  },
+  "run_id": "60dd20cdff51490099e12f4413d4276a",
+  "run_params": {
+    "trial": null,
+    "sample_ids": null,
+    "match_on_deceased": false,
+    "match_on_closed": true,
+    "report_clinical_reasons": false,
+    "workers": {
+      "$numberInt": "20"
+    },
+    "ignore_run_log": false
+  },
+  "_created": {
+    "$date": {
+      "$numberLong": "1665005142820"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a75941161"
+  },
+  "protocol_no": "16-499",
+  "clinical_ids": {
+    "all": null
+  },
+  "run_id": "60dd20cdff51490099e12f4413d4276a",
+  "run_params": {
+    "trial": null,
+    "sample_ids": null,
+    "match_on_deceased": false,
+    "match_on_closed": true,
+    "report_clinical_reasons": false,
+    "workers": {
+      "$numberInt": "20"
+    },
+    "ignore_run_log": false
+  },
+  "_created": {
+    "$date": {
+      "$numberLong": "1665005142820"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a75941162"
+  },
+  "protocol_no": "19-114",
+  "clinical_ids": {
+    "all": null
+  },
+  "run_id": "60dd20cdff51490099e12f4413d4276a",
+  "run_params": {
+    "trial": null,
+    "sample_ids": null,
+    "match_on_deceased": false,
+    "match_on_closed": true,
+    "report_clinical_reasons": false,
+    "workers": {
+      "$numberInt": "20"
+    },
+    "ignore_run_log": false
+  },
+  "_created": {
+    "$date": {
+      "$numberLong": "1665005142820"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a75941163"
+  },
+  "protocol_no": "17-687",
+  "clinical_ids": {
+    "all": null
+  },
+  "run_id": "60dd20cdff51490099e12f4413d4276a",
+  "run_params": {
+    "trial": null,
+    "sample_ids": null,
+    "match_on_deceased": false,
+    "match_on_closed": true,
+    "report_clinical_reasons": false,
+    "workers": {
+      "$numberInt": "20"
+    },
+    "ignore_run_log": false
+  },
+  "_created": {
+    "$date": {
+      "$numberLong": "1665005142820"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a75941164"
+  },
+  "protocol_no": "17-010",
+  "clinical_ids": {
+    "all": null
+  },
+  "run_id": "60dd20cdff51490099e12f4413d4276a",
+  "run_params": {
+    "trial": null,
+    "sample_ids": null,
+    "match_on_deceased": false,
+    "match_on_closed": true,
+    "report_clinical_reasons": false,
+    "workers": {
+      "$numberInt": "20"
+    },
+    "ignore_run_log": false
+  },
+  "_created": {
+    "$date": {
+      "$numberLong": "1665005142820"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a75941165"
+  },
+  "protocol_no": "18-441",
+  "clinical_ids": {
+    "all": null
+  },
+  "run_id": "60dd20cdff51490099e12f4413d4276a",
+  "run_params": {
+    "trial": null,
+    "sample_ids": null,
+    "match_on_deceased": false,
+    "match_on_closed": true,
+    "report_clinical_reasons": false,
+    "workers": {
+      "$numberInt": "20"
+    },
+    "ignore_run_log": false
+  },
+  "_created": {
+    "$date": {
+      "$numberLong": "1665005142820"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a75941166"
+  },
+  "protocol_no": "19-726",
+  "clinical_ids": {
+    "all": null
+  },
+  "run_id": "60dd20cdff51490099e12f4413d4276a",
+  "run_params": {
+    "trial": null,
+    "sample_ids": null,
+    "match_on_deceased": false,
+    "match_on_closed": true,
+    "report_clinical_reasons": false,
+    "workers": {
+      "$numberInt": "20"
+    },
+    "ignore_run_log": false
+  },
+  "_created": {
+    "$date": {
+      "$numberLong": "1665005142820"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a75941167"
+  },
+  "protocol_no": "18-008",
+  "clinical_ids": {
+    "all": null
+  },
+  "run_id": "60dd20cdff51490099e12f4413d4276a",
+  "run_params": {
+    "trial": null,
+    "sample_ids": null,
+    "match_on_deceased": false,
+    "match_on_closed": true,
+    "report_clinical_reasons": false,
+    "workers": {
+      "$numberInt": "20"
+    },
+    "ignore_run_log": false
+  },
+  "_created": {
+    "$date": {
+      "$numberLong": "1665005142820"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a75941168"
+  },
+  "protocol_no": "18-392",
+  "clinical_ids": {
+    "all": null
+  },
+  "run_id": "60dd20cdff51490099e12f4413d4276a",
+  "run_params": {
+    "trial": null,
+    "sample_ids": null,
+    "match_on_deceased": false,
+    "match_on_closed": true,
+    "report_clinical_reasons": false,
+    "workers": {
+      "$numberInt": "20"
+    },
+    "ignore_run_log": false
+  },
+  "_created": {
+    "$date": {
+      "$numberLong": "1665005142820"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a75941172"
+  },
+  "protocol_no": "18-274",
+  "clinical_ids": {
+    "all": null
+  },
+  "run_id": "60dd20cdff51490099e12f4413d4276a",
+  "run_params": {
+    "trial": null,
+    "sample_ids": null,
+    "match_on_deceased": false,
+    "match_on_closed": true,
+    "report_clinical_reasons": false,
+    "workers": {
+      "$numberInt": "20"
+    },
+    "ignore_run_log": false
+  },
+  "_created": {
+    "$date": {
+      "$numberLong": "1665005142820"
+    }
+  }
+}
+{
+  "_id": {
+    "$oid": "633df6593f8f663a75941173"
+  },
+  "protocol_no": "18-559",
+  "clinical_ids": {
+    "all": null
+  },
+  "run_id": "60dd20cdff51490099e12f4413d4276a",
+  "run_params": {
+    "trial": null,
+    "sample_ids": null,
+    "match_on_deceased": false,
+    "match_on_closed": true,
+    "report_clinical_reasons": false,
+    "workers": {
+      "$numberInt": "20"
+    },
+    "ignore_run_log": false
+  },
+  "_created": {
+    "$date": {
+      "$numberLong": "1665005142820"
+    }
+  }
+}

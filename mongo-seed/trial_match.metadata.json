@@ -16,91 +16,80 @@
         "$numberInt": "2"
       },
       "key": {
-        "FIRST_LAST": {
+        "show_in_ui": {
           "$numberInt": "1"
         }
       },
-      "name": "FIRST_LAST"
+      "name": "show_in_ui_1"
     },
     {
       "v": {
         "$numberInt": "2"
       },
       "key": {
-        "VITAL_STATUS": {
+        "mrn": {
           "$numberInt": "1"
         }
       },
-      "name": "VITAL_STATUS_1"
+      "name": "mrn_1"
     },
     {
       "v": {
         "$numberInt": "2"
       },
       "key": {
-        "ONCOTREE_PRIMARY_DIAGNOSIS_NAME": {
+        "is_disabled": {
           "$numberInt": "1"
         }
       },
-      "name": "ONCOTREE_PRIMARY_DIAGNOSIS_NAME_1"
+      "name": "is_disabled_1"
     },
     {
       "v": {
         "$numberInt": "2"
       },
       "key": {
-        "MRN": {
+        "sample_id": {
           "$numberInt": "1"
         }
       },
-      "name": "MRN_1"
+      "name": "sample_id_1"
     },
     {
       "v": {
         "$numberInt": "2"
       },
       "key": {
-        "TUMOR_MUTATIONAL_BURDEN_PER_MEGABASE": {
+        "clinical_id": {
           "$numberInt": "1"
         }
       },
-      "name": "TUMOR_MUTATIONAL_BURDEN_PER_MEGABASE_1"
+      "name": "clinical_id_1"
     },
     {
       "v": {
         "$numberInt": "2"
       },
       "key": {
-        "BIRTH_DATE_INT": {
+        "protocol_no": {
           "$numberInt": "1"
         }
       },
-      "name": "BIRTH_DATE_INT_1"
+      "name": "protocol_no_1"
     },
     {
       "v": {
         "$numberInt": "2"
       },
       "key": {
-        "SAMPLE_ID": {
+        "hash": {
           "$numberInt": "1"
         }
       },
-      "name": "SAMPLE_ID_1"
-    },
-    {
-      "v": {
-        "$numberInt": "2"
-      },
-      "key": {
-        "GENDER": {
-          "$numberInt": "1"
-        }
-      },
-      "name": "GENDER_1"
+      "name": "hash_1"
     }
   ],
-  "uuid": "4cbfd530ff6a4df394b9afa627a1df6b",
-  "collectionName": "clinical",
+  "uuid": "646f395eee674c58b3124e350498fcd1",
+  "collectionName": "trial_match",
   "type": "collection"
 }
