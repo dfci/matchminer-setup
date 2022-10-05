@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# This code compiles the Docker images for matchminer-api and matchminer-ui.
+# This is kind of a hack; use with caution.
+
+rm -rf ../image-compile
+mkdir -p ../image-compile
+
+pushd ../image-compile > /dev/null
+git clone git@github.com:dfci/matchminer-api.git
+pushd matchminer-api > /dev/null
+git clean -xdf && rm -rf ./.git
+docker build --no-cache --pull -t matchminer-api .
+popd > /dev/null
+
+git clone git@github.com:dfci/matchminer-ui.git
+pushd matchminer-ui > /dev/null
+git clean -xdf && rm -rf ./.git
+docker build --no-cache --pull -t matchminer-ui .
+popd > /dev/null
+
+echo "Diffing matchminer-api image..."
+container-diff diff 'daemon://matchminer-api' 'remote://matchminer/matchminer-api:latest' --type=file
+
+read -r -p "Push this image? [y/N] "
+case "$REPLY" in
+  y|Y)
+    docker tag matchminer-api matchminer/matchminer-api:latest
+    docker push matchminer/matchminer-api:latest
+    ;;
+  *)
+    echo "Not pushing image!"
+    ;;
+esac
+
+echo "Diffing matchminer-ui image..."
+container-diff diff 'daemon://matchminer-ui' 'remote://matchminer/matchminer-ui:latest' --type=file
+
+read -r -p "Push this image? [y/N] "
+case "$REPLY" in
+  y|Y)
+    docker tag matchminer-ui matchminer/matchminer-ui:latest
+    docker push matchminer/matchminer-ui:latest
+    ;;
+  *)
+    echo "Not pushing image!"
+    ;;
+esac
+
