@@ -20,8 +20,8 @@ git clean -xdf && rm -rf ./.git
 docker build --no-cache --pull -t matchminer-ui .
 popd > /dev/null
 
-echo "Diffing matchminer-api image..."
-container-diff diff 'daemon://matchminer-api' 'remote://matchminer/matchminer-api:latest' --type=file
+echo "Diffing matchminer-api image (this may take a while)..."
+container-diff diff 'daemon://matchminer-api' 'remote://matchminer/matchminer-api:latest' --type=file --no-cache
 
 read -r -p "Push this image? [y/N] "
 case "$REPLY" in
@@ -34,8 +34,8 @@ case "$REPLY" in
     ;;
 esac
 
-echo "Diffing matchminer-ui image..."
-container-diff diff 'daemon://matchminer-ui' 'remote://matchminer/matchminer-ui:latest' --type=file
+echo "Diffing matchminer-ui image (this may take a while)..."
+container-diff diff 'daemon://matchminer-ui' 'remote://matchminer/matchminer-ui:latest' --type=file --no-cache
 
 read -r -p "Push this image? [y/N] "
 case "$REPLY" in
