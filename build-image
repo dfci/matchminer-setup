@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# This code compiles the Docker images for matchminer-api and matchminer-ui.
+# This is kind of a hack; use with caution.
+
+# Usage:
+# ./build-image dfci/matchminer-api matchminer/matchminer-api
+# ./build-image dfci/matchminer-ui matchminer/matchminer-ui
+
+GITHUB_PROJECT="$1"
+DOCKER_IMAGE="$2"
+
+export DOCKER_SCAN_SUGGEST=false
+
+rm -rf ../image-compile
+mkdir -p ../image-compile
+pushd ../image-compile > /dev/null
+
+echo "Cloning repository..."
+git clone --quiet --depth=1 git@github.com:${GITHUB_PROJECT}.git .
+
+echo "Building image..."
+docker build \
+  --quiet \
+  --platform 'linux/x86_64' \
+  --label "git-commit=$(git rev-parse HEAD)" \
+  --label "build-time=$(date -u +"%Y-%m-%dT%H:%M:%SZ")" \
+  --tag new-image \
+  --pull \
+  .
+
+TAG="$(date +'%Y%m%d_%H%M%S')"
+echo "Git repository: $(git remote get-url origin)"
+echo "Git commit: $(git log --pretty=oneline -n1 HEAD)"
+echo "Docker repository: ${DOCKER_IMAGE}"
+echo "Docker tag: ${TAG}"
+read -r -p "Push this image? [y/N] "
+case "$REPLY" in
+  y|Y)
+    ;;
+  *)
+    exit 1
+    ;;
+esac
+
+docker tag new-image ${DOCKER_IMAGE}:${TAG}
+docker tag new-image ${DOCKER_IMAGE}:latest
+docker push ${DOCKER_IMAGE}:${TAG}
+docker push ${DOCKER_IMAGE}:latest
+popd > /dev/null
