@@ -15,6 +15,7 @@ services:
     volumes:
     - ./secrets.json:/secrets.json
     tmpfs:
+    - /tmp
     - /var/tmp
     environment:
       SECRETS_JSON: /secrets.json
