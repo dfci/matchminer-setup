@@ -114,10 +114,6 @@ do
   fi
 done
 
-# Restart matchminer-api after MongoDB up
-echo "Restarting MatchMiner API now that mongo is available..."
-docker-compose restart matchminer-api
-
 # Wait for MatchMiner to be ready:
 echo "Waiting for MatchMiner UI to become ready..."
 if ! wait_for_url http://localhost
