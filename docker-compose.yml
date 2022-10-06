@@ -37,7 +37,7 @@ services:
     stop_signal: SIGKILL # service is stateless, can be stopped immediately
     read_only: true
     ports:
-    - "80:80"
+    - "1952:80"
     depends_on:
     - matchminer-api
     environment:
