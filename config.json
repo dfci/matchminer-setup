@@ -1,6 +1,7 @@
 {
     "EPIC": false,
-    "accessRequestFormLink": "https://example.com",
+    "accessRequestFormLink": null,
+    "allowsEpic": false,
     "api": {
         "endpoint": "/api",
         "host": "http://localhost"
@@ -16,7 +17,10 @@
         "index": "matchminer",
         "proxy": "http://localhost/api/es"
     },
+    "linkToHomePage": "http://localhost",
     "name": "development",
+    "oncologistAccessLink": null,
+    "oncopanelPDFLink": null,
     "resources": {
         "ctgov_base": "https://clinicaltrials.gov/ct2/show/",
         "email": "help@institute.edu",
