@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# This code compiles the Docker images for matchminer-api and matchminer-ui.
+# This is kind of a hack; use with caution.
+# Of course, you first need to "docker login" to be able to push to the matchminer
+# repository, limiting the use of this script to people within DFCI.
+
+# Usage:
+# ./build-image dfci/matchminer-api matchminer/matchminer-api
+# ./build-image dfci/matchminer-ui matchminer/matchminer-ui
+
+GITHUB_PROJECT="$1"
+DOCKER_IMAGE="$2"
+GIT_REF="${3:-origin/master}"
+LOCAL_TAG="new-image-$({ LC_ALL=C tr -dc a-z </dev/urandom || true ; } | head -c 13)"
+
+export DOCKER_SCAN_SUGGEST=false
+
+rm -rf ../image-compile
+mkdir -p ../image-compile
+pushd ../image-compile > /dev/null
+
+echo "Cloning repository: $GITHUB_PROJECT"
+git clone --depth=1 --no-checkout git@github.com:${GITHUB_PROJECT}.git .
+
+echo "Switching to git ref: $GIT_REF"
+git switch --discard-changes --detach "$GIT_REF"
+
+echo "Building image to tag: $LOCAL_TAG"
+docker build \
+  --no-cache \
+  --platform 'linux/x86_64' \
+  --label "git-commit=$(git rev-parse HEAD)" \
+  --label "build-time=$(date -u +"%Y-%m-%dT%H:%M:%SZ")" \
+  --tag "$LOCAL_TAG" \
+  --pull \
+  .
+
+TAG="$(date +'%Y%m%d_%H%M%S')"
+echo "Git repository: $(git remote get-url origin)"
+echo "Git commit: $(git log --pretty=oneline -n1 HEAD)"
+echo "Docker repository: ${DOCKER_IMAGE}"
+echo "Docker tag: ${TAG}"
+read -r -p "Push this image? [y/N] "
+case "$REPLY" in
+  y|Y)
+    ;;
+  *)
+    exit 1
+    ;;
+esac
+
+docker tag "$LOCAL_TAG" ${DOCKER_IMAGE}:${TAG}
+docker tag "$LOCAL_TAG" ${DOCKER_IMAGE}:latest
+docker push ${DOCKER_IMAGE}:${TAG}
+docker push ${DOCKER_IMAGE}:latest
+popd > /dev/null

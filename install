@@ -75,15 +75,6 @@ pushd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null
 echo 'Taking down MatchMiner if it is already running...'
 docker-compose down --remove-orphans --volumes --timeout 5 --rmi local
 
-# Ensure that port 80 is not in use (macOS only):
-if test "$(uname -s)" = "Darwin" && which lsof >/dev/null 2>/dev/null
-then
-  if lsof -iTCP:80 -sTCP:LISTEN >/dev/null 2>/dev/null
-  then
-    die 'Cannot start: port 80 is already in use'
-  fi
-fi
-
 # Pull images, create containers, and start:
 # (This is basically the same as docker-compose up)
 echo 'Pulling latest versions of images...'
@@ -114,34 +105,30 @@ do
   fi
 done
 
-# Restart matchminer-api after MongoDB up
-echo "Restarting MatchMiner API now that mongo is available..."
-docker-compose restart matchminer-api
-
 # Wait for MatchMiner to be ready:
 echo "Waiting for MatchMiner UI to become ready..."
-if ! wait_for_url http://localhost
+if ! wait_for_url http://localhost:1952
 then
   die "Startup failed! Check docker-compose logs to debug..."
 fi
 echo "Waiting for MatchMiner API to become ready..."
-if ! wait_for_url http://localhost/api/info
+if ! wait_for_url http://localhost:1952/api/info
 then
   die "Startup failed! Check docker-compose logs to debug..."
 fi
 
 echo "Waiting for MatchMiner ElasticSearch to become ready..."
-if ! wait_for_url http://localhost/api/es/_nodes/_local
+if ! wait_for_url http://localhost:1952/api/es/_nodes/_local
 then
   die "Startup failed! Check docker-compose logs to debug..."
 fi
 
 echo "Resetting elasticsearch..."
-curl --netrc-file ./netrc --fail --location --silent --show-error --output /dev/null -X POST http://localhost/api/reset_elasticsearch
+curl --netrc-file ./netrc --fail --location --silent --show-error --output /dev/null -X POST http://localhost:1952/api/reset_elasticsearch
 
 # Notify user:
 echo "MatchMiner started successfully!"
-echo "The UI is now available at: http://localhost"
+echo "The UI is now available at: http://localhost:1952"
 echo "To manage services, enter the directory '$(pwd)' and run docker-compose."
 if test "${MATCHMINER_NO_OPEN_BROWSER:-}" = "1"
 then
@@ -149,11 +136,11 @@ then
 elif which xdg-open >/dev/null 2>/dev/null
 then
   echo "Opening browser..."
-  xdg-open http://localhost
+  xdg-open http://localhost:1952
 elif test "$(uname -s)" = "Darwin"
 then
   echo "Opening browser..."
-  open http://localhost
+  open http://localhost:1952
 fi
 
 # Setup complete!

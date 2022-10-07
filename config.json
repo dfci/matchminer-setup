@@ -1,9 +1,10 @@
 {
     "EPIC": false,
-    "accessRequestFormLink": "https://example.com",
+    "accessRequestFormLink": null,
+    "allowsEpic": false,
     "api": {
         "endpoint": "/api",
-        "host": "http://localhost"
+        "host": "http://localhost:1952"
     },
     "bannerExpirationDays": 14,
     "cBio": false,
@@ -14,9 +15,12 @@
     },
     "elasticsearch": {
         "index": "matchminer",
-        "proxy": "http://localhost/api/es"
+        "proxy": "http://localhost:1952/api/es"
     },
+    "linkToHomePage": "http://localhost:1952",
     "name": "development",
+    "oncologistAccessLink": null,
+    "oncopanelPDFLink": null,
     "resources": {
         "ctgov_base": "https://clinicaltrials.gov/ct2/show/",
         "email": "help@institute.edu",
