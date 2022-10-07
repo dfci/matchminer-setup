@@ -78,7 +78,12 @@ docker-compose down --remove-orphans --volumes --timeout 5 --rmi local
 # Pull images, create containers, and start:
 # (This is basically the same as docker-compose up)
 echo 'Pulling latest versions of images...'
-docker-compose pull
+# Note: we don't use "docker-compose pull" for this because it won't set the
+# platform correctly.
+docker pull --platform linux/x86_64 'elasticsearch:6.8.12'
+docker pull 'mongo:6.0-focal'
+docker pull --platform linux/x86_64 'matchminer/matchminer-api:latest'
+docker pull --platform linux/x86_64 'matchminer/matchminer-ui:latest'
 if test -n "$MATCHMINER_BUILD_PATH"
 then
   echo "Performing build from ${MATCHMINER_BUILD_PATH}..."
@@ -98,12 +103,15 @@ START_WAIT="$SECONDS"
 while ! docker-compose exec mongo mongosh --quiet --eval ";" mongodb://mongo:27017 >/dev/null 2>/dev/null
 do
   sleep 1
-  if test "$((SECONDS - START_WAIT))" -ge 30
+  if test "$((SECONDS - START_WAIT))" -ge 120
   then
     echo "MongoDB failed to start; check docker-compose logs to debug"
     exit 1
   fi
 done
+
+echo "Restarting MatchMiner API..."
+docker-compose restart matchminer-api
 
 # Wait for MatchMiner to be ready:
 echo "Waiting for MatchMiner UI to become ready..."

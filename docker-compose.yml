@@ -1,6 +1,7 @@
 version: "3"
 services:
   elasticsearch:
+    platform: linux/x86_64
     image: elasticsearch:6.8.12
     volumes:
     - ./elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
