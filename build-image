@@ -10,6 +10,8 @@ set -euo pipefail
 
 GITHUB_PROJECT="$1"
 DOCKER_IMAGE="$2"
+GIT_REF="${3:-origin/master}"
+LOCAL_TAG="new-image-$({ LC_ALL=C tr -dc a-z </dev/urandom || true ; } | head -c 13)"
 
 export DOCKER_SCAN_SUGGEST=false
 
@@ -17,16 +19,19 @@ rm -rf ../image-compile
 mkdir -p ../image-compile
 pushd ../image-compile > /dev/null
 
-echo "Cloning repository..."
-git clone --quiet --depth=1 git@github.com:${GITHUB_PROJECT}.git .
+echo "Cloning repository: $GITHUB_PROJECT"
+git clone --depth=1 --no-checkout git@github.com:${GITHUB_PROJECT}.git .
 
-echo "Building image..."
+echo "Switching to git ref: $GIT_REF"
+git switch --discard-changes --detach "$GIT_REF"
+
+echo "Building image to tag: $LOCAL_TAG"
 docker build \
-  --quiet \
+  --no-cache \
   --platform 'linux/x86_64' \
   --label "git-commit=$(git rev-parse HEAD)" \
   --label "build-time=$(date -u +"%Y-%m-%dT%H:%M:%SZ")" \
-  --tag new-image \
+  --tag "$LOCAL_TAG" \
   --pull \
   .
 
@@ -44,8 +49,8 @@ case "$REPLY" in
     ;;
 esac
 
-docker tag new-image ${DOCKER_IMAGE}:${TAG}
-docker tag new-image ${DOCKER_IMAGE}:latest
+docker tag "$LOCAL_TAG" ${DOCKER_IMAGE}:${TAG}
+docker tag "$LOCAL_TAG" ${DOCKER_IMAGE}:latest
 docker push ${DOCKER_IMAGE}:${TAG}
 docker push ${DOCKER_IMAGE}:latest
 popd > /dev/null
