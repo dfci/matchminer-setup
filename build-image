@@ -3,6 +3,8 @@ set -euo pipefail
 
 # This code compiles the Docker images for matchminer-api and matchminer-ui.
 # This is kind of a hack; use with caution.
+# Of course, you first need to "docker login" to be able to push to the matchminer
+# repository, limiting the use of this script to people within DFCI.
 
 # Usage:
 # ./build-image dfci/matchminer-api matchminer/matchminer-api
