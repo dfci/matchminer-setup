@@ -8,6 +8,7 @@ services:
     networks:
     - mm-dev-network
   matchminer-api:
+    platform: linux/x86_64
     build:
       context: ${MATCHMINER_BUILD_PATH:-/tmp/nowhere}/matchminer-api
     image: matchminer/matchminer-api:latest
@@ -32,6 +33,7 @@ services:
     networks:
     - mm-dev-network
   matchminer-ui:
+    platform: linux/x86_64
     build:
       context: ${MATCHMINER_BUILD_PATH:-/tmp/nowhere}/matchminer-ui
     image: matchminer/matchminer-ui:latest
