@@ -37,7 +37,7 @@ docker build \
   --pull \
   .
 
-TAG="$(date +'%Y%m%d_%H%M%S')"
+TAG="dev_$(date +'%Y%m%d_%H%M%S')"
 echo "Git repository: $(git remote get-url origin)"
 echo "Git commit: $(git log --pretty=oneline -n1 HEAD)"
 echo "Docker repository: ${DOCKER_IMAGE}"
@@ -54,5 +54,7 @@ esac
 docker tag "$LOCAL_TAG" ${DOCKER_IMAGE}:${TAG}
 docker tag "$LOCAL_TAG" ${DOCKER_IMAGE}:latest
 docker push ${DOCKER_IMAGE}:${TAG}
+echo "Pushed: ${DOCKER_IMAGE}:${TAG}"
 docker push ${DOCKER_IMAGE}:latest
+echo "Pushed: ${DOCKER_IMAGE}:latest"
 popd > /dev/null
