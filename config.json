@@ -8,7 +8,6 @@
     },
     "bannerExpirationDays": 14,
     "cBio": false,
-    "demo": true,
     "devUser": {
         "token": "fb4d6830-d3aa-481b-bcd6-270d69790e11",
         "user_id": "577cf6ef2b9920002cef0337"
@@ -17,10 +16,14 @@
         "index": "matchminer",
         "proxy": "http://localhost:1952/api/es"
     },
+    "hideSavePrintWarning": true,
+    "immunoprofileEmail": null,
     "linkToHomePage": "http://localhost:1952",
-    "name": "development",
+    "loginButtonText": "Login",
+    "matomo": null,
     "oncologistAccessLink": null,
     "oncopanelPDFLink": null,
+    "oncotreeLink": null,
     "resources": {
         "ctgov_base": "https://clinicaltrials.gov/ct2/show/",
         "email": "help@institute.edu",
@@ -28,15 +31,11 @@
         "institution": "DEMO",
         "institutionFull": "DEMO Institution",
         "logo": "dfci.jpg",
-        "oncpro_base": ""
+        "oncpro_base": null
     },
-    "samlAuthentication": false,
     "sessionTimeout": {
         "idleAllowed": 2700,
         "idleCountdown": 30
     },
-    "slsUrl": "",
-    "tracking": {
-        "piwik_site_id": 3
-    }
+    "slsUrl": null
 }
